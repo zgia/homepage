@@ -1,0 +1,14 @@
+# Hugo build output
+/public/
+
+# Hugo build lock
+.hugo_build.lock
+
+# OS files
+.DS_Store
+
+# Logs
+*.log
+
+# Node / tool cache（如果以后加）
+node_modules/

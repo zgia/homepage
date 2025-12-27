@@ -1,0 +1,105 @@
+baseURL = "https://zgia.net/"
+title = "快乐每一天"
+theme = "PaperMod"
+languageCode = "zh-CN"
+defaultContentLanguage = "zh"
+hasCJKLanguage = true
+
+enableRobotsTXT = true
+buildDrafts = false
+buildFuture = false
+buildExpired = false
+
+# URL 结构（保持 WP 风格）
+[permalinks]
+posts = "/:year/:month/:slug/"
+
+[pagination]
+pagerSize = 10
+
+# =========================
+# 菜单
+# =========================
+[[menu.main]]
+name = "首页"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "归档"
+url = "/archives/"
+weight = 5
+
+[[menu.main]]
+name = "分类"
+url = "/categories/"
+weight = 10
+
+[[menu.main]]
+name = "标签"
+url = "/tags/"
+weight = 20
+
+[[menu.main]]
+name = "搜索"
+url = "/search/"
+weight = 30
+
+# =========================
+# PaperMod 参数
+# =========================
+[params]
+env = "production"
+description = "记录生活，记录思考"
+author = "zgia"
+
+#mainSections = ["posts"]
+
+defaultTheme = "light"      # dark / light / auto
+ShowReadingTime = true
+ShowPostNavLinks = true
+ShowBreadCrumbs = true
+ShowCodeCopyButtons = true
+ShowWordCount = false
+ShowPageNums = true
+
+# 列表页
+ShowRssButtonInSectionTermList = true
+
+# 首页展示方式
+disableSpecial1stPost = false
+
+# 图片支持
+UseHugoToc = true
+
+# 搜索（PaperMod 内置 Fuse.js）
+enableSearch = true
+
+# =========================
+# 站内搜索配置
+# =========================
+[params.search]
+enabled = true
+type = "fuse"
+
+[params.search.fuse]
+isCaseSensitive = false
+shouldSort = true
+location = 0
+distance = 1000
+threshold = 0.3
+minMatchCharLength = 2
+keys = ["title", "summary", "content"]
+
+# =========================
+# 分类 / 标签
+# =========================
+[taxonomies]
+category = "categories"
+tag = "tags"
+
+# =========================
+# 输出格式（搜索 / RSS / sitemap）
+# =========================
+[outputs]
+home = ["HTML", "RSS", "JSON"]
