@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>熊节 on 快乐每一天</title><link>https://zgia.net/tags/%E7%86%8A%E8%8A%82/</link><description>Recent content in 熊节 on 快乐每一天</description><generator>Hugo -- 0.153.3</generator><language>zh-CN</language><lastBuildDate>Wed, 24 Sep 2008 14:41:16 +0000</lastBuildDate><atom:link href="https://zgia.net/tags/%E7%86%8A%E8%8A%82/index.xml" rel="self" type="application/rss+xml"/><item><title>重构－改善既有代码的设计（中文版）</title><link>https://zgia.net/2008/09/%E9%87%8D%E6%9E%84%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%AD%E6%96%87%E7%89%88/</link><pubDate>Wed, 10 Sep 2008 14:31:33 +0000</pubDate><guid>https://zgia.net/2008/09/%E9%87%8D%E6%9E%84%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%AD%E6%96%87%E7%89%88/</guid><description>&lt;p&gt;【原 书 名】 Refactoring: Improving the Design of Existing Code
+【原出版社】 Pearson
+【作 者】Martin Fowler 【译 者】 侯捷 熊节
+【出 版 社】 中国电力出版社【I S B N】 9787508315546
+【出版日期】 2003 年8月 【开 本】 16开 【页 码】 431 【版 次】1-1
+软件工程领域的超级经典巨著，与另一巨著《设计模式》并称&amp;quot;软工双雄&amp;quot;，全美销量超过100000册，亚马逊书店五星书。
+在本书中，作者Martin Fowler充分展示了何处可能需要重构，以及如何将不好的设计改造为良好的设计。
+当对象技术成为老生常谈之后——尤其在Java编程语言之中，新的问题也在软件开发社区中浮现了出来。缺乏经验的开发人员完成了大量粗劣设计，获得的程序不但缺乏效率，也难以维护和扩展。渐渐地，软件系统专家发现，与这些沿袭下来的、质量不佳的程序共处，是多么艰难。对象专家运用许多技术来改善既有程序的结构完美性与性能，已有数年之久。
+查找：&lt;a href="http://www.google.com/search?q=%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1"&gt;《重构—改善既有代码的设计》&lt;/a&gt;
+&lt;img alt="封面" loading="lazy" src="http://img2.dangdang.com/images/8695773.jpg"&gt;&lt;/p&gt;</description></item></channel></rss>

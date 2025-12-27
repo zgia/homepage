@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>动漫 on 快乐每一天</title><link>https://zgia.net/tags/%E5%8A%A8%E6%BC%AB/</link><description>Recent content in 动漫 on 快乐每一天</description><generator>Hugo -- 0.153.3</generator><language>zh-CN</language><lastBuildDate>Tue, 22 Jan 2008 12:21:11 +0000</lastBuildDate><atom:link href="https://zgia.net/tags/%E5%8A%A8%E6%BC%AB/index.xml" rel="self" type="application/rss+xml"/><item><title>论坛维护日志</title><link>https://zgia.net/2008/01/%E8%AE%BA%E5%9D%9B%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/</link><pubDate>Tue, 22 Jan 2008 12:17:18 +0000</pubDate><guid>https://zgia.net/2008/01/%E8%AE%BA%E5%9D%9B%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/</guid><description>&lt;p&gt;&lt;a href="http://bbs.billwang.com/"&gt;&lt;img alt="billwang comic" loading="lazy" src="http://bbs.billwang.com/images/bill_logo.jpg"&gt;&lt;/a&gt;1、动漫
+重新编译php，支持openssl与mysqli。
+./configure &amp;ndash;prefix=/home/php523 &amp;ndash;with-apxs2=/home/apache224/bin/apxs &amp;ndash;enable-sockets &amp;ndash;enable-mbstring &amp;ndash;with-mysql=/home/mysql4114 &amp;ndash;with-png-dir &amp;ndash;with-zlib &amp;ndash;with-gd &amp;ndash;with-jpeg-dir &amp;ndash;with-freetype-dir &amp;ndash;with-libxml-dir=/usr/local/libxml &amp;ndash;with-openssl &amp;ndash;with-mysqli=/home/mysql4114/bin/mysql_config
+make &amp;amp;&amp;amp; make install
+&amp;mdash;&amp;ndash;apache&amp;mdash;&amp;mdash;
+./configure &amp;ndash;prefix=/home/apache224 &amp;ndash;enable-so &amp;ndash;enable-speling &amp;ndash;enable-rewrite &amp;ndash;enable-forward &amp;ndash;with-mpm=worker
+make &amp;amp;&amp;amp; make install
+&amp;mdash;&amp;ndash;libxml&amp;mdash;&amp;mdash;
+./configure &amp;ndash;prefix=/usr/local/libxml
+make &amp;amp;&amp;amp; make install
+&amp;mdash;&amp;ndash;mysql&amp;mdash;&amp;mdash;
+cd /home/software/mysql4114/
+chown -R root .
+chown -R mysql data
+chgrp -R mysql .
+bin/mysqld_safe &amp;ndash;user=mysql &amp;amp;
+scripts/mysql_install_db &amp;ndash;user=mysql
+chown -R root .
+chown -R mysql data
+chgrp -R mysql .
+bin/mysqld_safe &amp;ndash;user=mysql &amp;amp;
+&amp;mdash;&amp;mdash;END&amp;mdash;&amp;mdash;
+2、工业设计
+取消头像，等待头像服务器修复后再恢复；
+更改导航中动漫的链接；
+更改页面底部隐藏域的链接；&lt;/p&gt;</description></item></channel></rss>

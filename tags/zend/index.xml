@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Zend on 快乐每一天</title><link>https://zgia.net/tags/zend/</link><description>Recent content in Zend on 快乐每一天</description><generator>Hugo -- 0.153.3</generator><language>zh-CN</language><lastBuildDate>Wed, 05 Aug 2009 14:17:56 +0000</lastBuildDate><atom:link href="https://zgia.net/tags/zend/index.xml" rel="self" type="application/rss+xml"/><item><title>使用Eclipse PHP Development Tools + xdebug 2.0.0 调试web</title><link>https://zgia.net/2007/09/%E4%BD%BF%E7%94%A8eclipse-php-development-tools--xdebug-2.0.0-%E8%B0%83%E8%AF%95web/</link><pubDate>Mon, 24 Sep 2007 13:02:05 +0000</pubDate><guid>https://zgia.net/2007/09/%E4%BD%BF%E7%94%A8eclipse-php-development-tools--xdebug-2.0.0-%E8%B0%83%E8%AF%95web/</guid><description>&lt;p&gt;Eclipse: Eclipse Platform, Version: 3.3.0, Build id: I20070621-1340
+PHP: Version 5.2.0
+Xdebug: Version 2.0.0
+Apache: Version 2.0.59
+1、配置apache+php，网上很多，不细说；
+2、配置Xdebug；
+1）、下载相应模块：&lt;a href="http://www.xdebug.org/link.php?url=xdebug200-522-win"&gt;PHP 5.2.1+&lt;/a&gt;（php_xdebug-2.0.0-5.2.2.dll）；
+2）、将下载的dll复制到php.ini所在目录；
+3）、编辑php.ini文件，添加：
+[xdebug]
+xdebug.remote_enable = 1
+xdebug_remote_host = &amp;ldquo;192.168.1.25&amp;rdquo;
+xdebug.remote_port = 9000
+xdebug.remote_handler = &amp;ldquo;dbgp&amp;rdquo;
+zend_extension_ts=.\php_xdebug-2.0.0-5.2.2.dll
+这些配置比较简单，一看就明白。另，俺上个文章讲的是&lt;a href="http://yuntian.name/?p=8" title="Permanent Link to 使用Zend Debugger 5.2.10 + Zend Studio 5.5.0调试web"&gt;使用Zend Debugger 5.2.10 + Zend Studio 5.5.0调试web&lt;/a&gt;，所以，如果您配置了用Zend Debugger调试web的话，请将
+[Zend]
+zend_extension_ts=.\ZendDebugger.dll
+zend_debugger.allow_hosts=192.168.1.25
+zend_debugger.expose_remotely=always
+等4行注释掉。
+4）、重启apache，打开浏览器运行：http://192.168.1.25/phpinfo.php，您会看到：
+&lt;a href="http://yuntian.name/wp-content/uploads/2007/09/xdebug.png" title="Xdebug"&gt;&lt;img alt="Xdebug" loading="lazy" src="http://yuntian.name/wp-content/uploads/2007/09/xdebug.thumbnail.png"&gt;&lt;/a&gt;
+3、配置Eclipse；
+1）、可以使用Eclispe的插件功能安装PDT：&lt;a href="http://downloads.zend.com/pdt"&gt;http://downloads.zend.com/pdt&lt;/a&gt;，会用Eclipse的都知道怎么用；
+2）、您也可以直接下载&lt;a href="http://eclipse.cdpa.nsysu.edu.tw/tools/pdt/downloads/drops/R20070917/org.eclipse.php_feature-1.0-R20070917.zip" title="org.eclipse.php_feature-1.0-R20070917.zip"&gt;org.eclipse.php&lt;/a&gt;和&lt;a href="http://downloads.zend.com/pdt/debugger/org.zend.php.debug_feature-I20070905.zip" title="org.zend.php.debug_feature-I20070905.zip"&gt;org.zend.php.debug&lt;/a&gt;，自己安装插件；
+3）、Eclipse &amp;raquo; Window &amp;raquo; Preferences &amp;raquo; PHP项；
+1）、PHP executables，新建一个，PHP Debugger选择Xdebug。您可以将这个新加的设置默认；
+2）、Debug中，PHP Debugger选择Xdebug；Installed Debuggers中，Xdebug的端口设置为您在php.ini中设置的xdebug.remote_port；
+3）、Debug子项Launching中，Xdebug不支持“Allow multiple debug sessions”，所以设置为Never即可；
+4）、PHP Servers中，您可以根据自己的需要，选择“Publish Projects to this Server”，俺没有选择；
+4）、Run &amp;raquo; Open Debug Dialog，如图：
+&lt;a href="http://yuntian.name/wp-content/uploads/2007/09/debug_dialog.PNG" title="Open Debug Dialog"&gt;&lt;img alt="Open Debug Dialog" loading="lazy" src="http://yuntian.name/wp-content/uploads/2007/09/debug_dialog.thumbnail.PNG"&gt;&lt;/a&gt;
+请注意：Auto Generate项，如果您的web有子路径，则可能需要自己设置一下。Advanced标签，不选：Open in Browser。Common标签，根据您web的编码，设置Console Encoding。
+以上设置后，在Open Debug Dialog的对话框中，点击底部的“Debug”即可进行web调试。以后只要在Run &amp;raquo; Debug History中选择此次调试名称就可以了。
+在配置中，有很多步骤没有仔细说明，是因为这些步骤是Eclipse的基本概念。
+现在eclise和zend studio都可以调试web了，不过我还是喜欢用eclispe。^_^。
+相关站点：
+PDT Project: &lt;a href="http://www.eclipse.org/pdt/"&gt;http://www.eclipse.org/pdt/&lt;/a&gt;
+Zend.com / pdt : &lt;a href="http://www.zend.com/pdt"&gt;http://www.zend.com/pdt&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Wordpress on 快乐每一天</title><link>https://zgia.net/tags/wordpress/</link><description>Recent content in Wordpress on 快乐每一天</description><generator>Hugo -- 0.153.3</generator><language>zh-CN</language><lastBuildDate>Wed, 07 Mar 2012 14:15:14 +0000</lastBuildDate><atom:link href="https://zgia.net/tags/wordpress/index.xml" rel="self" type="application/rss+xml"/><item><title>[更新到 v0.3]Show baby’s age / 一个显示某人多大的wordpress插件</title><link>https://zgia.net/2012/03/%E6%9B%B4%E6%96%B0%E5%88%B0-v0.3show-babys-age-/-%E4%B8%80%E4%B8%AA%E6%98%BE%E7%A4%BA%E6%9F%90%E4%BA%BA%E5%A4%9A%E5%A4%A7%E7%9A%84wordpress%E6%8F%92%E4%BB%B6/</link><pubDate>Wed, 07 Mar 2012 14:10:50 +0000</pubDate><guid>https://zgia.net/2012/03/%E6%9B%B4%E6%96%B0%E5%88%B0-v0.3show-babys-age-/-%E4%B8%80%E4%B8%AA%E6%98%BE%E7%A4%BA%E6%9F%90%E4%BA%BA%E5%A4%9A%E5%A4%A7%E7%9A%84wordpress%E6%8F%92%E4%BB%B6/</guid><description>&lt;p&gt;原文：《&lt;a href="http://zgia.net/?p=5"&gt;Show baby’s age / 一个显示某人多大的wordpress插件&lt;/a&gt;》，v0.3下载地址：&lt;a href="http://zgia.net/wp-content/uploads/2007/09/babyage.0.3.zip"&gt;babyage.0.3&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;还是08年的上传到wp，一直未改动，都忘记有这么一个玩意了。昨晚有个用户发邮件问我还在维护吗？新版本的wp不能使用了。&lt;/p&gt;</description></item><item><title>Windows Live Writer 向 DEDECMS 发文章</title><link>https://zgia.net/2009/04/windows-live-writer-%E5%90%91-dedecms-%E5%8F%91%E6%96%87%E7%AB%A0/</link><pubDate>Thu, 30 Apr 2009 16:37:00 +0000</pubDate><guid>https://zgia.net/2009/04/windows-live-writer-%E5%90%91-dedecms-%E5%8F%91%E6%96%87%E7%AB%A0/</guid><description>&lt;p&gt;这个需求很另类啊，不过已经基本实现了（基于wordpress自带的xmlrpc.php而成）。可用的功能有：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用dedecms自己的模板、CSS；&lt;/li&gt;
+&lt;li&gt;发表带图片的文章；&lt;/li&gt;
+&lt;li&gt;列出最近发表的文章；&lt;/li&gt;
+&lt;li&gt;指定分类（取消了live writer新建分类的功能）；&lt;/li&gt;
+&lt;li&gt;标签；&lt;/li&gt;
+&lt;li&gt;文章来源；&lt;/li&gt;
+&lt;li&gt;文章作者；&lt;/li&gt;
+&lt;li&gt;文章简介；&lt;/li&gt;
+&lt;li&gt;设置发表时间&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;待实现功能：编辑已经发表的文章。
+//****
+相关文章：
+&lt;a href="http://msdn.microsoft.com/en-us/library/bb463266.aspx" title="Windows Live Writer Provider Customization API"&gt;Windows Live Writer Provider Customization API&lt;/a&gt;
+&lt;a href="http://www.s-anand.net/blog/wordpress-themes-on-windows-live-writer/" title="WordPress themes on Live Writer"&gt;WordPress themes on Live Writer&lt;/a&gt;
+&lt;a href="http://codex.wordpress.org/Weblog_Client" title="Weblog Client"&gt;Weblog Client&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

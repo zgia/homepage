@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Ldaps on 快乐每一天</title><link>https://zgia.net/tags/ldaps/</link><description>Recent content in Ldaps on 快乐每一天</description><generator>Hugo -- 0.153.3</generator><language>zh-CN</language><lastBuildDate>Fri, 16 Apr 2010 13:56:47 +0000</lastBuildDate><atom:link href="https://zgia.net/tags/ldaps/index.xml" rel="self" type="application/rss+xml"/><item><title>Windows下使用PHP+LDAPS</title><link>https://zgia.net/2010/04/windows%E4%B8%8B%E4%BD%BF%E7%94%A8php-ldaps/</link><pubDate>Fri, 16 Apr 2010 13:51:27 +0000</pubDate><guid>https://zgia.net/2010/04/windows%E4%B8%8B%E4%BD%BF%E7%94%A8php-ldaps/</guid><description>&lt;p&gt;1、启用：&lt;strong&gt;php_openssl.dll&lt;/strong&gt;；
+2、新建目录：&lt;strong&gt;c:\openldap\sysconf&lt;/strong&gt;（c是系统盘）；
+3、在sysconf下新建文件：&lt;strong&gt;ldap.conf&lt;/strong&gt;，文件内容：&lt;strong&gt;TLS_REQCERT never&lt;/strong&gt;。
+4、重启apache（IIS我没有试过，估计也是这样做）
+测试：&lt;/p&gt;</description></item></channel></rss>

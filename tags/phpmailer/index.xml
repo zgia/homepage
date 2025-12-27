@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Phpmailer on 快乐每一天</title><link>https://zgia.net/tags/phpmailer/</link><description>Recent content in Phpmailer on 快乐每一天</description><generator>Hugo -- 0.153.3</generator><language>zh-CN</language><lastBuildDate>Sun, 16 Nov 2008 22:42:11 +0000</lastBuildDate><atom:link href="https://zgia.net/tags/phpmailer/index.xml" rel="self" type="application/rss+xml"/><item><title>通过phpmailer备份文件到gmail</title><link>https://zgia.net/2008/11/%E9%80%9A%E8%BF%87phpmailer%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E5%88%B0gmail/</link><pubDate>Sun, 16 Nov 2008 22:17:27 +0000</pubDate><guid>https://zgia.net/2008/11/%E9%80%9A%E8%BF%87phpmailer%E5%A4%87%E4%BB%BD%E6%96%87%E4%BB%B6%E5%88%B0gmail/</guid><description>&lt;p&gt;* 将文件作为Gmail附件备份到Gmail中
+* ver 1.0
+* 2008-11-15 zGia!
+* &lt;a href="mailto:wuliuqiba@gmail.com"&gt;wuliuqiba@gmail.com&lt;/a&gt;
+PHPMailer:
+&lt;a href="http://phpmailer.codeworxtech.com/"&gt;http://phpmailer.codeworxtech.com/&lt;/a&gt;
+&lt;a href="http://sourceforge.net/projects/phpmailer"&gt;http://sourceforge.net/projects/phpmailer&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;PHP email transport class featuring file attachments, SMTP servers, CCs, BCCs, HTML messages, word wrap, and more. Sends email via sendmail, PHP mail(), QMail, or with SMTP.&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;php
+/**
+* 将文件作为Gmail附件备份到Gmail中
+* ver 1.0
+* 2008-11-15 zGia!
+* wuliuqiba@gmail.com
+*/
+error_reporting(E_ALL);
+//error_reporting(E_STRICT);
+date_default_timezone_set(&amp;#39;Asia/Shanghai&amp;#39;);
+//@header(&amp;#39;Content-Type: text/html; charset=utf-8&amp;#39;);
+include(&amp;#34;class.phpmailer.php&amp;#34;);
+// ##############################################################################
+// Gmail标签
+// 通过filter，设置邮件自动分拣。比如设置filter：
+// Matches: to:(xxxxx+book@gmail.com)
+// Do this: Skip Inbox, Apply label &amp;#34;book&amp;#34;
+$labels = array(
+&amp;#34;nolabel&amp;#34; = &amp;#34;&amp;#34;,
+&amp;#34;book&amp;#34; =&amp;gt; &amp;#34;book&amp;#34;,
+&amp;#34;backup&amp;#34; =&amp;gt; &amp;#34;backup&amp;#34;
+);
+// 是否将多个附件发送到一个邮件中
+$more_attaches_email = false;
+// 附件
+// 不能发送可执行文件或大于 20 MB 的邮件
+$attaches = array(
+&amp;#34;E:\phpmailer.rar&amp;#34;,
+);
+// 发邮件
+if ($more_attaches_email)
+{
+mailer($labels[&amp;#39;book&amp;#39;], $attaches);
+}
+else
+{
+foreach ($attaches as $attach)
+{
+mailer($labels[&amp;#39;backup&amp;#39;], $attach);
+}
+}
+// ##############################################################################
+// 传送门
+function mailer($label, &amp;amp;$attaches)
+{
+unset($mail);
+$mail =&amp;amp; init_mail($label);
+send_mail($mail, $attaches);
+}
+// ##############################################################################
+// 发邮件
+function send_mail(&amp;amp;$mail, &amp;amp;$attaches)
+{
+// 邮件主题，正文
+$subject = &amp;#34;&amp;#34;;
+if(empty($attaches))
+{
+echo &amp;#34;No attach!&amp;#34;;
+exit;
+}
+// 多附件
+if(is_array($attaches))
+{
+foreach ($attaches as $attach)
+{
+$mail-&amp;gt;AddAttachment($attach);
+$subject .= &amp;#34;|&amp;#34; . basename($attach);
+}
+}
+// 单附件
+else
+{
+$mail-&amp;gt;AddAttachment($attaches);
+$subject .= &amp;#34;|&amp;#34; . basename($attaches);
+}
+$subject = preg_replace(&amp;#34;/^\|/i&amp;#34;, &amp;#34;&amp;#34;, $subject);
+echo &amp;#34;Sending $subject now......\n\t\t&amp;#34;;
+$mail-&amp;gt;Subject = $subject;
+$mail-&amp;gt;Body = preg_replace(&amp;#34;/\|/i&amp;#34;, &amp;#34;
+&amp;#34;, $subject);
+if(!$mail-&amp;gt;Send()) {
+echo &amp;#34;Failure: &amp;#34; . $mail-&amp;gt;ErrorInfo;
+} else {
+echo &amp;#34;Success, message sent.&amp;#34;;
+}
+echo &amp;#34;\n&amp;#34;;
+}
+// ##############################################################################
+// 初始化 PHPMailer
+function init_mail($label = &amp;#34;&amp;#34;)
+{
+// 构造
+$mail = new PHPMailer();
+// 使用 SMTP
+$mail-&amp;gt;IsSMTP();
+// 激活 SMTP 验证你哦是
+$mail-&amp;gt;SMTPAuth = true;
+// 下面3个配置不明白的，可以查看此链接：
+// http://mail.google.com/support/bin/answer.py?answer=76147
+// 此服务器要求安全连接
+$mail-&amp;gt;SMTPSecure = &amp;#34;ssl&amp;#34;;
+// 使用 Gmail 作为 SMTP 服务器
+$mail-&amp;gt;Host = &amp;#34;smtp.gmail.com&amp;#34;;
+// Gmail 服务器的 SMTP 端口号
+$mail-&amp;gt;Port = 465;
+// ****************** 从这里开始 *************************
+// 发送邮件的 Gmail 账户
+$mail-&amp;gt;Username = &amp;#34;username@gmail.com&amp;#34;;
+$mail-&amp;gt;Password = &amp;#34;password&amp;#34;;
+// 添加回复到
+//$mail-&amp;gt;AddReplyTo(&amp;#34;replyto@gmail.com&amp;#34;,&amp;#34;replyto&amp;#34;);
+// 发信人
+$mail-&amp;gt;From = &amp;#34;sender@gmail.com&amp;#34;;
+$mail-&amp;gt;FromName = &amp;#34;sender&amp;#34;;
+// 收信人
+$mail-&amp;gt;AddAddress(&amp;#34;recipients&amp;#34; . ($label ? &amp;#34;+$label&amp;#34; : &amp;#34;&amp;#34;) . &amp;#34;@gmail.com&amp;#34;, &amp;#34;recipients&amp;#34;);
+// ****************** 到这里结束，改成你自己的gmail账号 *************************
+// 邮件编码
+$mail-&amp;gt;CharSet = &amp;#34;utf-8&amp;#34;;
+// HTML 格式邮件，如果使用文本模式查看的话，所显示的信息
+$mail-&amp;gt;AltBody = &amp;#34;To view the message, please use an HTML compatible email viewer!&amp;#34;;
+// 正文折行
+$mail-&amp;gt;WordWrap = 50;
+// 可以使用某个文件内容作为邮件正文
+//$body = $mail-&amp;gt;getFile(&amp;#39;contents.html&amp;#39;);
+//$body = eregi_replace(&amp;#34;[\]&amp;#34;,&amp;#39;&amp;#39;,$body);
+//$mail-&amp;gt;MsgHTML($body);
+// 发送 HTML 格式邮件
+$mail-&amp;gt;IsHTML(true);
+return $mail;
+}
+&lt;/code&gt;&lt;/pre&gt;</description></item></channel></rss>

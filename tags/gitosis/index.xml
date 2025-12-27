@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Gitosis on 快乐每一天</title><link>https://zgia.net/tags/gitosis/</link><description>Recent content in Gitosis on 快乐每一天</description><generator>Hugo -- 0.153.3</generator><language>zh-CN</language><lastBuildDate>Mon, 11 Mar 2013 17:17:58 +0000</lastBuildDate><atom:link href="https://zgia.net/tags/gitosis/index.xml" rel="self" type="application/rss+xml"/><item><title>GIT 配置相关文章</title><link>https://zgia.net/2013/02/git-%E9%85%8D%E7%BD%AE%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/</link><pubDate>Tue, 19 Feb 2013 10:11:39 +0000</pubDate><guid>https://zgia.net/2013/02/git-%E9%85%8D%E7%BD%AE%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/</guid><description>&lt;p&gt;最近花时间了解了一下Git，并配置了一个。学习过程中，查阅了一些文章，分享出来。&lt;/p&gt;
+&lt;p&gt;工作环境：ubuntu&lt;/p&gt;
+&lt;p&gt;1、《&lt;a href="http://www.cnblogs.com/xl19862005/archive/2011/06/28/2092464.html" title="ubuntu上配置git服务器"&gt;ubuntu上配置git服务器&lt;/a&gt;》&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;文章出处：&lt;a href="http://www.cnblogs.com/xl19862005"&gt;http://www.cnblogs.com/xl19862005&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;作者：Xandy&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当执行：git clone git@server:gitosis-admin.git，如果出现：fatal: ‘/home/git/repositories/gitosis-admin.git’ does not appear to be a git repository，请参看条目2。&lt;/p&gt;</description></item></channel></rss>

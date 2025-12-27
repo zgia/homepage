@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Perl on 快乐每一天</title><link>https://zgia.net/tags/perl/</link><description>Recent content in Perl on 快乐每一天</description><generator>Hugo -- 0.153.3</generator><language>zh-CN</language><lastBuildDate>Thu, 28 Aug 2014 17:36:40 +0000</lastBuildDate><atom:link href="https://zgia.net/tags/perl/index.xml" rel="self" type="application/rss+xml"/><item><title>论坛维护日志</title><link>https://zgia.net/2008/01/%E8%AE%BA%E5%9D%9B%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/</link><pubDate>Tue, 22 Jan 2008 12:17:18 +0000</pubDate><guid>https://zgia.net/2008/01/%E8%AE%BA%E5%9D%9B%E7%BB%B4%E6%8A%A4%E6%97%A5%E5%BF%97/</guid><description>&lt;p&gt;&lt;a href="http://bbs.billwang.com/"&gt;&lt;img alt="billwang comic" loading="lazy" src="http://bbs.billwang.com/images/bill_logo.jpg"&gt;&lt;/a&gt;1、动漫
+重新编译php，支持openssl与mysqli。
+./configure &amp;ndash;prefix=/home/php523 &amp;ndash;with-apxs2=/home/apache224/bin/apxs &amp;ndash;enable-sockets &amp;ndash;enable-mbstring &amp;ndash;with-mysql=/home/mysql4114 &amp;ndash;with-png-dir &amp;ndash;with-zlib &amp;ndash;with-gd &amp;ndash;with-jpeg-dir &amp;ndash;with-freetype-dir &amp;ndash;with-libxml-dir=/usr/local/libxml &amp;ndash;with-openssl &amp;ndash;with-mysqli=/home/mysql4114/bin/mysql_config
+make &amp;amp;&amp;amp; make install
+&amp;mdash;&amp;ndash;apache&amp;mdash;&amp;mdash;
+./configure &amp;ndash;prefix=/home/apache224 &amp;ndash;enable-so &amp;ndash;enable-speling &amp;ndash;enable-rewrite &amp;ndash;enable-forward &amp;ndash;with-mpm=worker
+make &amp;amp;&amp;amp; make install
+&amp;mdash;&amp;ndash;libxml&amp;mdash;&amp;mdash;
+./configure &amp;ndash;prefix=/usr/local/libxml
+make &amp;amp;&amp;amp; make install
+&amp;mdash;&amp;ndash;mysql&amp;mdash;&amp;mdash;
+cd /home/software/mysql4114/
+chown -R root .
+chown -R mysql data
+chgrp -R mysql .
+bin/mysqld_safe &amp;ndash;user=mysql &amp;amp;
+scripts/mysql_install_db &amp;ndash;user=mysql
+chown -R root .
+chown -R mysql data
+chgrp -R mysql .
+bin/mysqld_safe &amp;ndash;user=mysql &amp;amp;
+&amp;mdash;&amp;mdash;END&amp;mdash;&amp;mdash;
+2、工业设计
+取消头像，等待头像服务器修复后再恢复；
+更改导航中动漫的链接；
+更改页面底部隐藏域的链接；&lt;/p&gt;</description></item><item><title>Amazon Simple Storage Service(Amazon S3) 之源码下载</title><link>https://zgia.net/2007/12/amazon-simple-storage-serviceamazon-s3-%E4%B9%8B%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/</link><pubDate>Mon, 31 Dec 2007 23:54:20 +0000</pubDate><guid>https://zgia.net/2007/12/amazon-simple-storage-serviceamazon-s3-%E4%B9%8B%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/</guid><description>&lt;p&gt;Amazon S3 Viewer
+zGia!
+wuliuqiba AT gmail.com
+&lt;a href="http://zgia.net/"&gt;http://zgia.net/&lt;/a&gt;
+&lt;strong&gt;简介&lt;/strong&gt;
+采用Amazon S3上提供的perl类库：Amazon S3 Library for REST in Perl，这个
+类库完成了PUT，GET，HEAD，DELETE等几乎所有的操作。
+地址：&lt;a href="http://developer.amazonwebservices.com/connect/entry.jspa?externalID=133&amp;amp;categoryID=47"&gt;http://developer.amazonwebservices.com/connect/entry.jspa?externalID=133&amp;amp;categoryID=47&lt;/a&gt;
+我所做的仅是用perl写了个web程序，有一个简单的UI，基本无创新，仅供参考。
+&lt;strong&gt;使用说明&lt;/strong&gt;
+1、linux下，将文件logger.log，文件夹acl设置为777；
+2、编辑文件ZWFrameConfig.pm；
+3、可能需要安装某些类，请查阅：S3_README；
+4、使用md5.pl获得新的$cfg{&amp;lsquo;password&amp;rsquo;}，
+5、必需要修改的：$cfg{&amp;lsquo;awsAccessKeyID&amp;rsquo;}、$cfg{&amp;lsquo;awsSecretAccessKey&amp;rsquo;} 和$cfg{&amp;lsquo;password&amp;rsquo;}；
+6、可能要修改的：$cfg{&amp;lsquo;webName&amp;rsquo;} 和 $cfg{&amp;lsquo;uniqueCookie&amp;rsquo;}，其他的随便。&lt;/p&gt;</description></item><item><title>Wide character in subroutine entry at /path/Perl/lib/MD5.pm line 12.</title><link>https://zgia.net/2007/12/wide-character-in-subroutine-entry-at-/path/perl/lib/md5.pm-line-12./</link><pubDate>Thu, 27 Dec 2007 10:33:34 +0000</pubDate><guid>https://zgia.net/2007/12/wide-character-in-subroutine-entry-at-/path/perl/lib/md5.pm-line-12./</guid><description>&lt;p&gt;编写S3相关程序时，将key做MD5，然后存到服务器，有些key包含中文，就出现了这个问题。
+因为程序采用的是UTF-8编码，因此，先对key进行utf8编码，再MD5，就没有这个问题了。&lt;/p&gt;</description></item><item><title>messages日志文件中IP获取小程序</title><link>https://zgia.net/2007/09/messages%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%E4%B8%ADip%E8%8E%B7%E5%8F%96%E5%B0%8F%E7%A8%8B%E5%BA%8F/</link><pubDate>Fri, 28 Sep 2007 16:18:17 +0000</pubDate><guid>https://zgia.net/2007/09/messages%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%E4%B8%ADip%E8%8E%B7%E5%8F%96%E5%B0%8F%E7%A8%8B%E5%BA%8F/</guid><description>&lt;p&gt;日志内容：
+&amp;hellip;&amp;hellip;
+authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=61.146.178.13
+authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=bin86.ee.ccu.edu.tw
+authentication failure; logname= uid=0 euid=0 tty=NODEVssh ruser= rhost=137.65.134.61.net.jq.gs.dynamic.163data.com.cn
+&amp;hellip;&amp;hellip;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-perl" data-lang="perl"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;#!/usr/bin/perl&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;use&lt;/span&gt; strict;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;# Open log file&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;open(XXX, &lt;span style="color:#e6db74"&gt;&amp;#34;/path/to/logfile&amp;#34;&lt;/span&gt;) &lt;span style="color:#f92672"&gt;||&lt;/span&gt; die &lt;span style="color:#e6db74"&gt;&amp;#34;Error Reading File : $!&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;my&lt;/span&gt; @urls &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;lt;xxx&amp;gt;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;close(XXX);
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;my&lt;/span&gt; $i &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;my&lt;/span&gt; @ips &lt;span style="color:#f92672"&gt;=&lt;/span&gt; ();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;my&lt;/span&gt; $ip (@urls) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#75715e"&gt;#if ($ip =~ /rhost=((d{1,3}.d{1,3}.d{1,3}.d{1,3})?.*) /isg) {&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; ($ip &lt;span style="color:#f92672"&gt;=~&lt;/span&gt;&lt;span style="color:#e6db74"&gt; /rhost=(.*) /isg&lt;/span&gt;) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $i &lt;span style="color:#f92672"&gt;++&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;unless&lt;/span&gt; (is_in_array($1, @ips)) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; push @ips, $1;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;print&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;All attack count : $in&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;print&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;Use $#ips IP(s)n&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;print&lt;/span&gt; &lt;span style="color:#e6db74"&gt;&amp;#34;The ips are : @ipsn&amp;#34;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;sub&lt;/span&gt; &lt;span style="color:#a6e22e"&gt;is_in_array&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;{
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;my&lt;/span&gt; $ip &lt;span style="color:#f92672"&gt;=&lt;/span&gt; shift();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;my&lt;/span&gt; $s &lt;span style="color:#f92672"&gt;=&lt;/span&gt; shift();
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;my&lt;/span&gt; @ips &lt;span style="color:#f92672"&gt;=&lt;/span&gt; @$s;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;my&lt;/span&gt; $in &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;0&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;for&lt;/span&gt; (@ips) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;if&lt;/span&gt; ($_ &lt;span style="color:#f92672"&gt;eq&lt;/span&gt; $ip) {
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; $in &lt;span style="color:#f92672"&gt;=&lt;/span&gt; &lt;span style="color:#ae81ff"&gt;1&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;last&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; }
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#66d9ef"&gt;return&lt;/span&gt; $in;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;</description></item></channel></rss>

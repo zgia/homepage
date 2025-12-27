@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>C++ on 快乐每一天</title><link>https://zgia.net/tags/c++/</link><description>Recent content in C++ on 快乐每一天</description><generator>Hugo -- 0.153.3</generator><language>zh-CN</language><lastBuildDate>Tue, 12 Oct 2010 15:10:59 +0000</lastBuildDate><atom:link href="https://zgia.net/tags/c++/index.xml" rel="self" type="application/rss+xml"/><item><title>Objective-C, C++, Objective-C++</title><link>https://zgia.net/2010/10/objective-c-c-objective-c/</link><pubDate>Tue, 12 Oct 2010 15:10:59 +0000</pubDate><guid>https://zgia.net/2010/10/objective-c-c-objective-c/</guid><description>&lt;p&gt;Objective C中使用C++类的方法。以下适合基于Xcode开发iOS应用。&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;C++的类的扩展名不能为.cpp，不能为.m，只能为.mm，比如：StringHelper.mm&lt;/li&gt;
+&lt;li&gt;class StringHelper() { //&amp;hellip;. };最后不能忘记加上“;”&lt;/li&gt;
+&lt;li&gt;#import &amp;ldquo;StringHelper.mm&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;凡有第三行的的.m文件，其扩展名也需要改成.mm&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;使用：&lt;/p&gt;</description></item></channel></rss>

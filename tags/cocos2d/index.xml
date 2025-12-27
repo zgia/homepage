@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Cocos2d on 快乐每一天</title><link>https://zgia.net/tags/cocos2d/</link><description>Recent content in Cocos2d on 快乐每一天</description><generator>Hugo -- 0.153.3</generator><language>zh-CN</language><lastBuildDate>Tue, 31 May 2011 17:56:32 +0000</lastBuildDate><atom:link href="https://zgia.net/tags/cocos2d/index.xml" rel="self" type="application/rss+xml"/><item><title>整合Cocos2D的Documentation到Xcode的Documentation中</title><link>https://zgia.net/2011/05/%E6%95%B4%E5%90%88cocos2d%E7%9A%84documentation%E5%88%B0xcode%E7%9A%84documentation%E4%B8%AD/</link><pubDate>Tue, 31 May 2011 17:56:32 +0000</pubDate><guid>https://zgia.net/2011/05/%E6%95%B4%E5%90%88cocos2d%E7%9A%84documentation%E5%88%B0xcode%E7%9A%84documentation%E4%B8%AD/</guid><description>&lt;p&gt;1、需要2个辅助程序：&lt;a href="http://www.stack.nl/~dimitri/doxygen/download.html#latestsrc" title="下载"&gt;Doxygen&lt;/a&gt;，&lt;a href="http://www.ryandesign.com/graphviz/" title="下载"&gt;GraphViz&lt;/a&gt;。Doxygen安装后是一个GUI，不用理会。
+2、另一个准备工作，编辑cocos2d-iphone中的doxygen.config，将
+DOT_PATH               = /Applications/Doxygen.app/Contents/Resources/
+更改为：
+DOT_PATH               = /usr/local/graphviz-2.14/bin
+注：你的graphviz可能是其他版本。
+如果生成失败时，再加上一句：HAVE_DOT               = YES
+以我的为例，Xcode 4打开cocos2d-ios.xcodeproj，在Xcode的左上角，scheme中选择cocosd-documentation。然后随便选择模拟器，点击“Run”，这时就会生成文档。
+最好的是，文档根据类的关系，自动生成类的框架图。
+&lt;a href="http://zgia.net/wp-content/uploads/2011/05/doc.png"&gt;&lt;img loading="lazy" src="http://zgia.net/wp-content/uploads/2011/05/doc-300x118.png" title="doc"&gt;&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

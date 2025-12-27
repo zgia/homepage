@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Eam on 快乐每一天</title><link>https://zgia.net/tags/eam/</link><description>Recent content in Eam on 快乐每一天</description><generator>Hugo -- 0.153.3</generator><language>zh-CN</language><lastBuildDate>Thu, 26 Jun 2008 10:13:27 +0000</lastBuildDate><atom:link href="https://zgia.net/tags/eam/index.xml" rel="self" type="application/rss+xml"/><item><title>资产管理的物品申请流程</title><link>https://zgia.net/2008/06/%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E7%9A%84%E7%89%A9%E5%93%81%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B/</link><pubDate>Thu, 26 Jun 2008 10:13:27 +0000</pubDate><guid>https://zgia.net/2008/06/%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E7%9A%84%E7%89%A9%E5%93%81%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B/</guid><description>&lt;h1&gt;&lt;a href="http://yuntian.name/wp-content/uploads/2008/06/eam.png"&gt;&lt;img loading="lazy" src="http://yuntian.name/wp-content/uploads/2008/06/eam-300x148.png" title="eam"&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="员工申请物品流程"&gt; 员工申请物品流程&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id="1-申请"&gt;1 申请&lt;/h2&gt;
+&lt;h2 id="133-requestflow表存放申请流程处理"&gt;1.1 选择物品
+1.2 选择审批人
+1.3 提交申请
+1.3.1 request表存放每个申请
+1.3.2 requestitem表存放申请的物品
+1.3.3 requestflow表存放申请流程处理&lt;/h2&gt;
+&lt;h2 id="2-部门内部处理申请"&gt;2 部门内部处理申请&lt;/h2&gt;
+&lt;h2 id="232-库房"&gt;2.1 审批人接到通知：短信
+2.2 审批人审批，并给出意见（会签）
+2.3 转交下一步
+2.3.1 更高级审批人
+2.3.2 库房&lt;/h2&gt;
+&lt;h2 id="3-库房处理"&gt;3 库房处理&lt;/h2&gt;
+&lt;p&gt;有3个库房：IT库、非IT库、宣传品库。
+3.1 物资负责人
+3.1.1 没有物品：转采购流程
+3.1.2 有相关物品：审批后，转物品库房管理员
+3.2 库房管理员
+3.2.1 出库，结束流程。&lt;/p&gt;</description></item></channel></rss>

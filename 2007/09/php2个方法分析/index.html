@@ -1,0 +1,163 @@
+<!doctype html><html lang=zh dir=auto data-theme=light><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>php2个方法分析 | 快乐每一天</title><meta name=keywords content="php,unicode,UTF-8"><meta name=description content="今天研究了半天终于搞明白UTF-8和Unicode互转。
+另：javascript中的escape，把汉字转换后的unicode编码中的数字是16进制的。比如：escape(&ldquo;文&rdquo;) = %u6587，如果在html文件中使用，可以写成 【&amp;# x6587】，或者将6587转换为十进制25991，即【&amp;# 25991】。
+第一个： utf8_uri_encode，将UTF-8编码的文字转换为%ae%3d格式，
+比如，“中”，解析后，是3字节编码的，依次是228(e4)、184(b8)、173(ad)。
+最后输出：%e4%b8%ad"><meta name=author content="zgia"><link rel=canonical href=https://zgia.net/2007/09/php2%E4%B8%AA%E6%96%B9%E6%B3%95%E5%88%86%E6%9E%90/><link crossorigin=anonymous href=/assets/css/stylesheet.343cc480b9ffc8f04ccbe5e968ad674880cab773ec19905e93033065c1e7a804.css integrity="sha256-NDzEgLn/yPBMy+XpaK1nSIDKt3PsGZBekwMwZcHnqAQ=" rel="preload stylesheet" as=style><link rel=icon href=https://zgia.net/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://zgia.net/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://zgia.net/favicon-32x32.png><link rel=apple-touch-icon href=https://zgia.net/apple-touch-icon.png><link rel=mask-icon href=https://zgia.net/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=zh href=https://zgia.net/2007/09/php2%E4%B8%AA%E6%96%B9%E6%B3%95%E5%88%86%E6%9E%90/><noscript><style>#theme-toggle,.top-link{display:none}</style></noscript><script>localStorage.getItem("pref-theme")==="dark"&&(document.querySelector("html").dataset.theme="dark")</script><meta property="og:url" content="https://zgia.net/2007/09/php2%E4%B8%AA%E6%96%B9%E6%B3%95%E5%88%86%E6%9E%90/"><meta property="og:site_name" content="快乐每一天"><meta property="og:title" content="php2个方法分析"><meta property="og:description" content="今天研究了半天终于搞明白UTF-8和Unicode互转。 另：javascript中的escape，把汉字转换后的unicode编码中的数字是16进制的。比如：escape(“文”) = %u6587，如果在html文件中使用，可以写成 【&amp;# x6587】，或者将6587转换为十进制25991，即【&amp;# 25991】。 第一个： utf8_uri_encode，将UTF-8编码的文字转换为%ae%3d格式， 比如，“中”，解析后，是3字节编码的，依次是228(e4)、184(b8)、173(ad)。 最后输出：%e4%b8%ad"><meta property="og:locale" content="zh-CN"><meta property="og:type" content="article"><meta property="article:section" content="posts"><meta property="article:published_time" content="2007-09-27T16:51:35+00:00"><meta property="article:modified_time" content="2008-08-19T09:28:50+00:00"><meta property="article:tag" content="Php"><meta property="article:tag" content="Unicode"><meta property="article:tag" content="UTF-8"><meta name=twitter:card content="summary"><meta name=twitter:title content="php2个方法分析"><meta name=twitter:description content="今天研究了半天终于搞明白UTF-8和Unicode互转。
+另：javascript中的escape，把汉字转换后的unicode编码中的数字是16进制的。比如：escape(&ldquo;文&rdquo;) = %u6587，如果在html文件中使用，可以写成 【&amp;# x6587】，或者将6587转换为十进制25991，即【&amp;# 25991】。
+第一个： utf8_uri_encode，将UTF-8编码的文字转换为%ae%3d格式，
+比如，“中”，解析后，是3字节编码的，依次是228(e4)、184(b8)、173(ad)。
+最后输出：%e4%b8%ad"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://zgia.net/posts/"},{"@type":"ListItem","position":2,"name":"php2个方法分析","item":"https://zgia.net/2007/09/php2%E4%B8%AA%E6%96%B9%E6%B3%95%E5%88%86%E6%9E%90/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"php2个方法分析","name":"php2个方法分析","description":"今天研究了半天终于搞明白UTF-8和Unicode互转。 另：javascript中的escape，把汉字转换后的unicode编码中的数字是16进制的。比如：escape(\u0026ldquo;文\u0026rdquo;) = %u6587，如果在html文件中使用，可以写成 【\u0026amp;# x6587】，或者将6587转换为十进制25991，即【\u0026amp;# 25991】。 第一个： utf8_uri_encode，将UTF-8编码的文字转换为%ae%3d格式， 比如，“中”，解析后，是3字节编码的，依次是228(e4)、184(b8)、173(ad)。 最后输出：%e4%b8%ad\n","keywords":["php","unicode","UTF-8"],"articleBody":"今天研究了半天终于搞明白UTF-8和Unicode互转。 另：javascript中的escape，把汉字转换后的unicode编码中的数字是16进制的。比如：escape(“文”) = %u6587，如果在html文件中使用，可以写成 【\u0026# x6587】，或者将6587转换为十进制25991，即【\u0026# 25991】。 第一个： utf8_uri_encode，将UTF-8编码的文字转换为%ae%3d格式， 比如，“中”，解析后，是3字节编码的，依次是228(e4)、184(b8)、173(ad)。 最后输出：%e4%b8%ad\n/** * Conver utf-8 words to $hex format string * @author wordpress * @param $utf8_string string to encoded using utf-8 [STRING] * @return string of utf8 encode entities [STRING] * @access public */ function utf8_uri_encode( $utf8_string ) { $unicode = ‘’; $values = array(); $num_octets = 1; for ($i = 0; $i \u003c strlen( $utf8_string ); $i++ ) { $value = ord( $utf8_string[ $i ] ); if ( $value \u003c 128 ) { // ASCII $unicode .= chr($value); } else { // 根据第一个字节开头的1的数量,判断当前文字是2字节编码还是3字节编码 // 如果 240=\u003c $value \u003c= 248,则是4字节编码，这里没有考虑，估计也用不上 if ( count( $values ) == 0 ) { $num_octets = ( $value \u003c 224 ) ? 2 : 3; } $values[] = $value; // 当存放当前文字的字节数组等于当前文字的字节数时，则输入，并重置数组 if ( count( $values ) == $num_octets ) { if ($num_octets == 3) { $unicode .= ‘%’ . dechex($values[0]) . ‘%’ . dechex($values[1]) . ‘%’ . dechex($values[2]); } else { $unicode .= ‘%’ . dechex($values[0]) . ‘%’ . dechex($values[1]); } $values = array(); $num_octets = 1; } } } return $unicode; }\n第二个方法：utf8ToUnicodeEntities，将UTF-8编码的文字转换为\u0026#nnnnn或者\u0026#nnn; n={0..9}的Unicode格式\n/** * takes a string of utf-8 encoded characters and converts it to a string of unicode entities * each unicode entitiy has the either the form \u0026#nnnnn; or \u0026#nnn; n={0..9} and can be displayed by utf-8 supporting * browsers. * If the character passed maps as lower ascii it stays as such (a single char) instead of being presented as a unicode entity * @author Ronen Botzer * @param $source string encoded using utf-8 [STRING] * @return string of unicode entities [STRING] * @access public */ function utf8ToUnicodeEntities ($source) { // array used to figure what number to decrement from character order value // according to number of characters used to map unicode to ascii by utf-8 $decrement[4] = 240; // 4字节编码 $decrement[3] = 224; // 3字节编码 $decrement[2] = 192; // 2字节编码 $decrement[1] = 0; // ASCII // the number of bits to shift each charNum by $shift[1][0] = 0; // 0xxxxxxx // 110xxxxx 10xxxxxx $shift[2][0] = 6; // 110xxxxx $shift[2][1] = 0; // 10xxxxxx // 1110xxxx 10xxxxxx 10xxxxxx $shift[3][0] = 12; // 1110xxxx $shift[3][1] = 6; // 10xxxxxx $shift[3][2] = 0; // 10xxxxxx // 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx $shift[4][0] = 18; // 11110xxx $shift[4][1] = 12; // 10xxxxxx $shift[4][2] = 6; // 10xxxxxx $shift[4][3] = 0; // 10xxxxxx $pos = 0; $len = strlen ($source); $encodedString = ''; while ($pos \u003c $len) { $asciiPos = ord (substr ($source, $pos, 1)); // 根据第一个字节开头的1的数量,判断当前文字是2字节编码，还是3字节编码，等等... // 然后根据这个，将第一个文字取出来。 if (($asciiPos \u003e= 240) \u0026\u0026 ($asciiPos \u003c= 255)) { // 4 chars representing one unicode character $thisLetter = substr ($source, $pos, 4); $pos += 4; } else if (($asciiPos \u003e= 224) \u0026\u0026 ($asciiPos \u003c= 239)) { // 3 chars representing one unicode character $thisLetter = substr ($source, $pos, 3); $pos += 3; } else if (($asciiPos \u003e= 192) \u0026\u0026 ($asciiPos \u003c= 223)) { // 2 chars representing one unicode character $thisLetter = substr ($source, $pos, 2); $pos += 2; } else { // 1 char (lower ascii) $thisLetter = substr ($source, $pos, 1); $pos += 1; } // 对每个文字进行处理，比如处理“中” // “中”的长度3。 $thisLen = strlen ($thisLetter); if ($thisLen \u003e 1) { // process the string representing the letter to a unicode entity $thisPos = 0; $decimalCode = 0; while ($thisPos \u003c $thisLen) { // 第一个字节的ASCII值 $thisCharOrd = ord (substr ($thisLetter, $thisPos, 1)); if ($thisPos == 0) { // 比如“中”的第一个字节是11100100，而3字节文字的UTF-8编码的高位要加上11100000即224， // 也就是$decrement[3] $charNum = intval ($thisCharOrd - $decrement[$thisLen]); // 因为放到高位，所以左移12位，$shift[3][0] = 12 // 1110xxxx(第1字节) 10xxxxxx(第2字节) 10xxxxxx(第3字节) $decimalCode += ($charNum \u003c\u003c $shift[$thisLen][$thisPos]); } else { // 第2个和以上的字节的高位都要加上10000000，即128 $charNum = intval ($thisCharOrd - 128); // 将第2个和以上的字节分别左移6位，0位（不移动） $decimalCode += ($charNum \u003c\u003c $shift[$thisLen][$thisPos]); } $thisPos++; } if ($thisLen == 1) { $encodedLetter = \"\u0026#\". str_pad($decimalCode, 3, \"0\", STR_PAD_LEFT) . ';'; } else { $encodedLetter = \"\u0026#\". str_pad($decimalCode, 5, \"0\", STR_PAD_LEFT) . ';'; } $encodedString .= $encodedLetter; } else { $encodedString .= $thisLetter; } } return $encodedString; } 相关：UTF-8 and Unicode FAQ\n","wordCount":"1382","inLanguage":"zh","datePublished":"2007-09-27T16:51:35Z","dateModified":"2008-08-19T09:28:50Z","author":{"@type":"Person","name":"zgia"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://zgia.net/2007/09/php2%E4%B8%AA%E6%96%B9%E6%B3%95%E5%88%86%E6%9E%90/"},"publisher":{"@type":"Organization","name":"快乐每一天","logo":{"@type":"ImageObject","url":"https://zgia.net/favicon.ico"}}}</script></head><body id=top><header class=header><nav class=nav><div class=logo><a href=https://zgia.net/ accesskey=h title="快乐每一天 (Alt + H)">快乐每一天</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)" aria-label="Toggle theme">
+<svg id="moon" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>
+<svg id="sun" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://zgia.net/ title=首页><span>首页</span></a></li><li><a href=https://zgia.net/archives/ title=归档><span>归档</span></a></li><li><a href=https://zgia.net/categories/ title=分类><span>分类</span></a></li><li><a href=https://zgia.net/tags/ title=标签><span>标签</span></a></li><li><a href=https://zgia.net/search/ title=搜索><span>搜索</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://zgia.net/>主页</a>&nbsp;»&nbsp;<a href=https://zgia.net/posts/>Posts</a></div><h1 class="post-title entry-hint-parent">php2个方法分析</h1><div class=post-meta><span title='2007-09-27 16:51:35 +0000 UTC'>2007年9月27日</span>&nbsp;·&nbsp;<span>3 分钟</span>&nbsp;·&nbsp;<span>zgia</span></div></header><div class=post-content><p>今天研究了半天终于搞明白UTF-8和Unicode互转。
+另：javascript中的escape，把汉字转换后的unicode编码中的数字是16进制的。比如：escape(&ldquo;文&rdquo;) = %u6587，如果在html文件中使用，可以写成 【&amp;# x6587】，或者将6587转换为十进制25991，即【&amp;# 25991】。
+第一个： utf8_uri_encode，将UTF-8编码的文字转换为%ae%3d格式，
+比如，“中”，解析后，是3字节编码的，依次是228(e4)、184(b8)、173(ad)。
+最后输出：%e4%b8%ad</p><blockquote><p>/**
+* Conver utf-8 words to $hex format string
+* @author wordpress
+* @param $utf8_string string to encoded using utf-8 [STRING]
+* @return string of utf8 encode entities [STRING]
+* @access public
+*/
+function utf8_uri_encode( $utf8_string ) {
+$unicode = &lsquo;&rsquo;;
+$values = array();
+$num_octets = 1;
+for ($i = 0; $i &lt; strlen( $utf8_string ); $i++ ) {
+$value = ord( $utf8_string[ $i ] );
+if ( $value &lt; 128 ) {
+// ASCII
+$unicode .= chr($value);
+} else {
+// 根据第一个字节开头的1的数量,判断当前文字是2字节编码还是3字节编码
+// 如果 240=&lt; $value &lt;= 248,则是4字节编码，这里没有考虑，估计也用不上
+if ( count( $values ) == 0 ) {
+$num_octets = ( $value &lt; 224 ) ? 2 : 3;
+}
+$values[] = $value;
+// 当存放当前文字的字节数组等于当前文字的字节数时，则输入，并重置数组
+if ( count( $values ) == $num_octets ) {
+if ($num_octets == 3) {
+$unicode .= &lsquo;%&rsquo; . dechex($values[0]) . &lsquo;%&rsquo; . dechex($values[1]) . &lsquo;%&rsquo; . dechex($values[2]);
+} else {
+$unicode .= &lsquo;%&rsquo; . dechex($values[0]) . &lsquo;%&rsquo; . dechex($values[1]);
+}
+$values = array();
+$num_octets = 1;
+}
+}
+}
+return $unicode;
+}</p></blockquote><p>第二个方法：utf8ToUnicodeEntities，将UTF-8编码的文字转换为&amp;#nnnnn或者&amp;#nnn; n={0..9}的Unicode格式</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-txt data-lang=txt><span style=display:flex><span>/**
+</span></span><span style=display:flex><span>* takes a string of utf-8 encoded characters and converts it to a string of unicode entities
+</span></span><span style=display:flex><span>* each unicode entitiy has the either the form &amp;#nnnnn; or &amp;#nnn; n={0..9} and can be displayed by utf-8 supporting
+</span></span><span style=display:flex><span>* browsers.
+</span></span><span style=display:flex><span>* If the character passed maps as lower ascii it stays as such (a single char) instead of being presented as a unicode entity
+</span></span><span style=display:flex><span>* @author Ronen Botzer
+</span></span><span style=display:flex><span>* @param $source string encoded using utf-8 [STRING]
+</span></span><span style=display:flex><span>* @return string of unicode entities [STRING]
+</span></span><span style=display:flex><span>* @access public
+</span></span><span style=display:flex><span>*/
+</span></span><span style=display:flex><span>function utf8ToUnicodeEntities ($source) {
+</span></span><span style=display:flex><span>// array used to figure what number to decrement from character order value
+</span></span><span style=display:flex><span>// according to number of characters used to map unicode to ascii by utf-8
+</span></span><span style=display:flex><span>$decrement[4] = 240; // 4字节编码
+</span></span><span style=display:flex><span>$decrement[3] = 224; // 3字节编码
+</span></span><span style=display:flex><span>$decrement[2] = 192; // 2字节编码
+</span></span><span style=display:flex><span>$decrement[1] = 0; // ASCII 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>// the number of bits to shift each charNum by
+</span></span><span style=display:flex><span>$shift[1][0] = 0; // 0xxxxxxx 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>// 110xxxxx 10xxxxxx
+</span></span><span style=display:flex><span>$shift[2][0] = 6; // 110xxxxx
+</span></span><span style=display:flex><span>$shift[2][1] = 0; // 10xxxxxx 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>// 1110xxxx 10xxxxxx 10xxxxxx
+</span></span><span style=display:flex><span>$shift[3][0] = 12; // 1110xxxx
+</span></span><span style=display:flex><span>$shift[3][1] = 6; // 10xxxxxx
+</span></span><span style=display:flex><span>$shift[3][2] = 0; // 10xxxxxx 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>// 11110xxx 10xxxxxx 10xxxxxx 10xxxxxx
+</span></span><span style=display:flex><span>$shift[4][0] = 18; // 11110xxx
+</span></span><span style=display:flex><span>$shift[4][1] = 12; // 10xxxxxx
+</span></span><span style=display:flex><span>$shift[4][2] = 6; // 10xxxxxx
+</span></span><span style=display:flex><span>$shift[4][3] = 0; // 10xxxxxx 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$pos = 0;
+</span></span><span style=display:flex><span>$len = strlen ($source);
+</span></span><span style=display:flex><span>$encodedString = &#39;&#39;;
+</span></span><span style=display:flex><span>while ($pos &lt; $len) {
+</span></span><span style=display:flex><span>$asciiPos = ord (substr ($source, $pos, 1));
+</span></span><span style=display:flex><span>// 根据第一个字节开头的1的数量,判断当前文字是2字节编码，还是3字节编码，等等...
+</span></span><span style=display:flex><span>// 然后根据这个，将第一个文字取出来。
+</span></span><span style=display:flex><span>if (($asciiPos &gt;= 240) &amp;&amp; ($asciiPos &lt;= 255)) {
+</span></span><span style=display:flex><span>// 4 chars representing one unicode character
+</span></span><span style=display:flex><span>$thisLetter = substr ($source, $pos, 4);
+</span></span><span style=display:flex><span>$pos += 4;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>else if (($asciiPos &gt;= 224) &amp;&amp; ($asciiPos &lt;= 239)) {
+</span></span><span style=display:flex><span>// 3 chars representing one unicode character
+</span></span><span style=display:flex><span>$thisLetter = substr ($source, $pos, 3);
+</span></span><span style=display:flex><span>$pos += 3;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>else if (($asciiPos &gt;= 192) &amp;&amp; ($asciiPos &lt;= 223)) {
+</span></span><span style=display:flex><span>// 2 chars representing one unicode character
+</span></span><span style=display:flex><span>$thisLetter = substr ($source, $pos, 2);
+</span></span><span style=display:flex><span>$pos += 2;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>else {
+</span></span><span style=display:flex><span>// 1 char (lower ascii)
+</span></span><span style=display:flex><span>$thisLetter = substr ($source, $pos, 1);
+</span></span><span style=display:flex><span>$pos += 1;
+</span></span><span style=display:flex><span>} 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>// 对每个文字进行处理，比如处理“中”
+</span></span><span style=display:flex><span>// “中”的长度3。
+</span></span><span style=display:flex><span>$thisLen = strlen ($thisLetter);
+</span></span><span style=display:flex><span>if ($thisLen &gt; 1) {
+</span></span><span style=display:flex><span>// process the string representing the letter to a unicode entity
+</span></span><span style=display:flex><span>$thisPos = 0;
+</span></span><span style=display:flex><span>$decimalCode = 0;
+</span></span><span style=display:flex><span>while ($thisPos &lt; $thisLen) {
+</span></span><span style=display:flex><span>// 第一个字节的ASCII值
+</span></span><span style=display:flex><span>$thisCharOrd = ord (substr ($thisLetter, $thisPos, 1));
+</span></span><span style=display:flex><span>if ($thisPos == 0) {
+</span></span><span style=display:flex><span>// 比如“中”的第一个字节是11100100，而3字节文字的UTF-8编码的高位要加上11100000即224，
+</span></span><span style=display:flex><span>// 也就是$decrement[3]
+</span></span><span style=display:flex><span>$charNum = intval ($thisCharOrd - $decrement[$thisLen]);
+</span></span><span style=display:flex><span>// 因为放到高位，所以左移12位，$shift[3][0] = 12
+</span></span><span style=display:flex><span>// 1110xxxx(第1字节) 10xxxxxx(第2字节) 10xxxxxx(第3字节)
+</span></span><span style=display:flex><span>$decimalCode += ($charNum &lt;&lt; $shift[$thisLen][$thisPos]);
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>else {
+</span></span><span style=display:flex><span>// 第2个和以上的字节的高位都要加上10000000，即128
+</span></span><span style=display:flex><span>$charNum = intval ($thisCharOrd - 128);
+</span></span><span style=display:flex><span>// 将第2个和以上的字节分别左移6位，0位（不移动）
+</span></span><span style=display:flex><span>$decimalCode += ($charNum &lt;&lt; $shift[$thisLen][$thisPos]);
+</span></span><span style=display:flex><span>} 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$thisPos++;
+</span></span><span style=display:flex><span>} 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>if ($thisLen == 1) {
+</span></span><span style=display:flex><span>$encodedLetter = &#34;&amp;#&#34;. str_pad($decimalCode, 3, &#34;0&#34;, STR_PAD_LEFT) . &#39;;&#39;;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>else {
+</span></span><span style=display:flex><span>$encodedLetter = &#34;&amp;#&#34;. str_pad($decimalCode, 5, &#34;0&#34;, STR_PAD_LEFT) . &#39;;&#39;;
+</span></span><span style=display:flex><span>} 
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>$encodedString .= $encodedLetter;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>else {
+</span></span><span style=display:flex><span>$encodedString .= $thisLetter;
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>}
+</span></span><span style=display:flex><span>return $encodedString;
+</span></span><span style=display:flex><span>}
+</span></span></code></pre></div><p>相关：<a href=http://www.linuxforum.net/books/UTF-8-Unicode.html title="UTF-8 and Unicode FAQ">UTF-8 and Unicode FAQ</a></p></div><footer class=post-footer><ul class=post-tags><li><a href=https://zgia.net/tags/php/>Php</a></li><li><a href=https://zgia.net/tags/unicode/>Unicode</a></li><li><a href=https://zgia.net/tags/utf-8/>UTF-8</a></li></ul><nav class=paginav><a class=prev href=https://zgia.net/2007/09/messages%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6%E4%B8%ADip%E8%8E%B7%E5%8F%96%E5%B0%8F%E7%A8%8B%E5%BA%8F/><span class=title>« 上一页</span><br><span>messages日志文件中IP获取小程序</span>
+</a><a class=next href=https://zgia.net/2007/09/%E7%9B%B8%E5%86%8C%E5%BC%80%E5%8F%91/><span class=title>下一页 »</span><br><span>相册开发</span></a></nav></footer></article></main><footer class=footer><span>&copy; 2025 <a href=https://zgia.net/>快乐每一天</a></span> ·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+<a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg viewBox="0 0 12 6" fill="currentColor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");if(menu){const e=localStorage.getItem("menu-scroll-position");e&&(menu.scrollLeft=parseInt(e,10)),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}}document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{const e=document.querySelector("html");e.dataset.theme==="dark"?(e.dataset.theme="light",localStorage.setItem("pref-theme","light")):(e.dataset.theme="dark",localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="复制";function s(){t.innerHTML="已复制！",setTimeout(()=>{t.innerHTML="复制"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>

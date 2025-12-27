@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>图书馆 on 快乐每一天</title><link>https://zgia.net/categories/%E5%9B%BE%E4%B9%A6%E9%A6%86/</link><description>Recent content in 图书馆 on 快乐每一天</description><generator>Hugo -- 0.153.3</generator><language>zh-CN</language><lastBuildDate>Tue, 27 Mar 2012 16:44:32 +0000</lastBuildDate><atom:link href="https://zgia.net/categories/%E5%9B%BE%E4%B9%A6%E9%A6%86/index.xml" rel="self" type="application/rss+xml"/><item><title>重构－改善既有代码的设计（中文版）</title><link>https://zgia.net/2008/09/%E9%87%8D%E6%9E%84%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%AD%E6%96%87%E7%89%88/</link><pubDate>Wed, 10 Sep 2008 14:31:33 +0000</pubDate><guid>https://zgia.net/2008/09/%E9%87%8D%E6%9E%84%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1%E4%B8%AD%E6%96%87%E7%89%88/</guid><description>&lt;p&gt;【原 书 名】 Refactoring: Improving the Design of Existing Code
+【原出版社】 Pearson
+【作 者】Martin Fowler 【译 者】 侯捷 熊节
+【出 版 社】 中国电力出版社【I S B N】 9787508315546
+【出版日期】 2003 年8月 【开 本】 16开 【页 码】 431 【版 次】1-1
+软件工程领域的超级经典巨著，与另一巨著《设计模式》并称&amp;quot;软工双雄&amp;quot;，全美销量超过100000册，亚马逊书店五星书。
+在本书中，作者Martin Fowler充分展示了何处可能需要重构，以及如何将不好的设计改造为良好的设计。
+当对象技术成为老生常谈之后——尤其在Java编程语言之中，新的问题也在软件开发社区中浮现了出来。缺乏经验的开发人员完成了大量粗劣设计，获得的程序不但缺乏效率，也难以维护和扩展。渐渐地，软件系统专家发现，与这些沿袭下来的、质量不佳的程序共处，是多么艰难。对象专家运用许多技术来改善既有程序的结构完美性与性能，已有数年之久。
+查找：&lt;a href="http://www.google.com/search?q=%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1"&gt;《重构—改善既有代码的设计》&lt;/a&gt;
+&lt;img alt="封面" loading="lazy" src="http://img2.dangdang.com/images/8695773.jpg"&gt;&lt;/p&gt;</description></item><item><title>送杨山人归嵩山</title><link>https://zgia.net/2008/07/%E9%80%81%E6%9D%A8%E5%B1%B1%E4%BA%BA%E5%BD%92%E5%B5%A9%E5%B1%B1/</link><pubDate>Tue, 29 Jul 2008 23:28:18 +0000</pubDate><guid>https://zgia.net/2008/07/%E9%80%81%E6%9D%A8%E5%B1%B1%E4%BA%BA%E5%BD%92%E5%B5%A9%E5%B1%B1/</guid><description>&lt;p&gt;送杨山人归嵩山
+李白
+我有万古宅， 嵩阳玉女峰。
+长留一片月， 挂在东溪松。
+尔去掇仙草， 菖蒲花紫茸。
+岁晚或相访， 青天骑白龙。
+万古二字，大赞。&lt;/p&gt;</description></item><item><title>读词：才下眉头,却上心头</title><link>https://zgia.net/2006/08/%E8%AF%BB%E8%AF%8D%E6%89%8D%E4%B8%8B%E7%9C%89%E5%A4%B4%E5%8D%B4%E4%B8%8A%E5%BF%83%E5%A4%B4/</link><pubDate>Sat, 26 Aug 2006 23:00:00 +0000</pubDate><guid>https://zgia.net/2006/08/%E8%AF%BB%E8%AF%8D%E6%89%8D%E4%B8%8B%E7%9C%89%E5%A4%B4%E5%8D%B4%E4%B8%8A%E5%BF%83%E5%A4%B4/</guid><description>&lt;p&gt;一剪梅
+宋·李清照
+红藕香残玉簟秋。轻解罗裳，独上兰舟
+云中谁寄锦书来？雁字回时，月满西楼
+花自飘零水自流。一种相思，两处闲愁
+此情无计可消除，才下眉头，却上心头。
+如果李姐活在此时，这样的感觉肯定写不出来，除非赵哥在没有信号的深山老林。
+不知道别人咋样，至少我现在几乎是不写信了，有事就打个电话，没事就发个短信。
+再也没有大学时候，等待家人、朋友来信的急切感觉：一急没钱，二急朋友近况。
+我们寝室的w，他的来信通常会被大家传阅，我们知道他有一个仰慕者T，还知道有人洗了个凉水澡。
+虽然看别人信的行为是不对的，可是好像没有人这么认为。
+现在我们家信箱的来信有几种：信用卡帐单，手机通知单。偶尔发现个另类，却是广告。
+至少对于以上这几种，我不会有“相思”的。
+&lt;img loading="lazy" src="http://c.services.spaces.live.com/CollectionWebService/c.gif?cid=-903528312043436281&amp;page=RSS%ef%bc%9a%e8%af%bb%e8%af%8d%ef%bc%9a%e6%89%8d%e4%b8%8b%e7%9c%89%e5%a4%b4%2c%e5%8d%b4%e4%b8%8a%e5%bf%83%e5%a4%b4&amp;referrer="&gt;&lt;img loading="lazy" src="http://c.live.com/c.gif?NC=31263&amp;NA=1149&amp;PI=81873&amp;RF=&amp;DI=3919&amp;PS=85545&amp;TP=zgia.spaces.live.com&amp;GT1=zgia"&gt;&lt;/p&gt;</description></item><item><title>再读诗：行到水穷处，坐看云起时</title><link>https://zgia.net/2006/08/%E5%86%8D%E8%AF%BB%E8%AF%97%E8%A1%8C%E5%88%B0%E6%B0%B4%E7%A9%B7%E5%A4%84%E5%9D%90%E7%9C%8B%E4%BA%91%E8%B5%B7%E6%97%B6/</link><pubDate>Fri, 25 Aug 2006 19:27:00 +0000</pubDate><guid>https://zgia.net/2006/08/%E5%86%8D%E8%AF%BB%E8%AF%97%E8%A1%8C%E5%88%B0%E6%B0%B4%E7%A9%B7%E5%A4%84%E5%9D%90%E7%9C%8B%E4%BA%91%E8%B5%B7%E6%97%B6/</guid><description>&lt;p&gt;终南别业
+王维
+中岁颇好道，晚家南山陲。兴来每独往，胜事空自知。
+行到水穷处，坐看云起时。偶然值林叟，谈笑无还期。
+诗人简介：
+王维，字摩诘，父亲早死，母亲笃信佛教。从开元二十八年（740）到天宝三年（743），王维先隐终南山，晚年又在陕西蓝田过着半官半隐的生活。王维晚年官至尚书右丞，职务可谓不小。其实，由于政局变化反复，他早已看到仕途的艰险，便想超脱这个烦扰的尘世。他吃斋奉佛，悠闲自在，大约四十岁后，就开始过着亦官亦隐的生活。
+&lt;img loading="lazy" src="http://c.services.spaces.live.com/CollectionWebService/c.gif?cid=-903528312043436281&amp;page=RSS%ef%bc%9a%e5%86%8d%e8%af%bb%e8%af%97%ef%bc%9a%e8%a1%8c%e5%88%b0%e6%b0%b4%e7%a9%b7%e5%a4%84%ef%bc%8c%e5%9d%90%e7%9c%8b%e4%ba%91%e8%b5%b7%e6%97%b6&amp;referrer="&gt;&lt;img loading="lazy" src="http://c.live.com/c.gif?NC=31263&amp;NA=1149&amp;PI=81873&amp;RF=&amp;DI=3919&amp;PS=85545&amp;TP=zgia.spaces.live.com&amp;GT1=zgia"&gt;&lt;/p&gt;</description></item><item><title>徐爱国: 名案中的法律智慧</title><link>https://zgia.net/2006/03/%E5%BE%90%E7%88%B1%E5%9B%BD-%E5%90%8D%E6%A1%88%E4%B8%AD%E7%9A%84%E6%B3%95%E5%BE%8B%E6%99%BA%E6%85%A7/</link><pubDate>Mon, 20 Mar 2006 08:00:00 +0000</pubDate><guid>https://zgia.net/2006/03/%E5%BE%90%E7%88%B1%E5%9B%BD-%E5%90%8D%E6%A1%88%E4%B8%AD%E7%9A%84%E6%B3%95%E5%BE%8B%E6%99%BA%E6%85%A7/</guid><description>&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://lz.book.sohu.com/serialize-id-3461.html"&gt;徐爱国: 名案中的法律智慧&lt;/a&gt;
+本书搜集了100多个发生于英美国家，在当时具有轰动性的案件，主要包括三类：famous case，即在社会中有公众影响的案件；principal case，是具有典型意义的重要案件；leading case，也就是开拓法律“新世界”的创新案件。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img loading="lazy" src="http://c.services.spaces.live.com/CollectionWebService/c.gif?cid=-903528312043436281&amp;page=RSS%ef%bc%9a%e5%9b%be%e4%b9%a6%e5%88%97%e8%a1%a8%ef%bc%9a%e5%9b%be%e4%b9%a6%e5%88%97%e8%a1%a8&amp;referrer="&gt;&lt;img loading="lazy" src="http://c.live.com/c.gif?NC=31263&amp;NA=1149&amp;PI=81873&amp;RF=&amp;DI=3919&amp;PS=85545&amp;TP=zgia.spaces.live.com&amp;GT1=zgia"&gt;&lt;/p&gt;</description></item><item><title>今天小雪，网上看到一诗，特抄来分享</title><link>https://zgia.net/2006/01/%E4%BB%8A%E5%A4%A9%E5%B0%8F%E9%9B%AA%E7%BD%91%E4%B8%8A%E7%9C%8B%E5%88%B0%E4%B8%80%E8%AF%97%E7%89%B9%E6%8A%84%E6%9D%A5%E5%88%86%E4%BA%AB/</link><pubDate>Thu, 12 Jan 2006 09:35:00 +0000</pubDate><guid>https://zgia.net/2006/01/%E4%BB%8A%E5%A4%A9%E5%B0%8F%E9%9B%AA%E7%BD%91%E4%B8%8A%E7%9C%8B%E5%88%B0%E4%B8%80%E8%AF%97%E7%89%B9%E6%8A%84%E6%9D%A5%E5%88%86%E4%BA%AB/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;问刘十九
+白居易
+绿蚁新醅酒，红泥小火炉。
+晚来天欲雪，能饮一杯无？&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;背景：这是白居易被贬江州后所作，他邀请的刘十九就是刘轲，当时隐居庐山，因为和白居易性情相投而结为好友。&lt;/p&gt;</description></item><item><title>快乐的心情，需要放荡一下：登科后</title><link>https://zgia.net/2006/01/%E5%BF%AB%E4%B9%90%E7%9A%84%E5%BF%83%E6%83%85%E9%9C%80%E8%A6%81%E6%94%BE%E8%8D%A1%E4%B8%80%E4%B8%8B%E7%99%BB%E7%A7%91%E5%90%8E/</link><pubDate>Wed, 11 Jan 2006 11:44:00 +0000</pubDate><guid>https://zgia.net/2006/01/%E5%BF%AB%E4%B9%90%E7%9A%84%E5%BF%83%E6%83%85%E9%9C%80%E8%A6%81%E6%94%BE%E8%8D%A1%E4%B8%80%E4%B8%8B%E7%99%BB%E7%A7%91%E5%90%8E/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;登　科　后
+孟郊
+昔日龌龊不足夸，今朝放荡思无涯。
+春风得意马蹄疾，一日看尽长安花。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;“得意”两字，道尽一切心态。
+&lt;img loading="lazy" src="http://c.services.spaces.live.com/CollectionWebService/c.gif?cid=-903528312043436281&amp;page=RSS%ef%bc%9a%e5%bf%ab%e4%b9%90%e7%9a%84%e5%bf%83%e6%83%85%ef%bc%8c%e9%9c%80%e8%a6%81%e6%94%be%e8%8d%a1%e4%b8%80%e4%b8%8b%ef%bc%9a%e7%99%bb%e7%a7%91%e5%90%8e&amp;referrer="&gt;&lt;img loading="lazy" src="http://c.live.com/c.gif?NC=31263&amp;NA=1149&amp;PI=81873&amp;RF=&amp;DI=3919&amp;PS=85545&amp;TP=zgia.spaces.live.com&amp;GT1=zgia"&gt;&lt;/p&gt;</description></item><item><title>访戴天山道士不遇</title><link>https://zgia.net/2006/01/%E8%AE%BF%E6%88%B4%E5%A4%A9%E5%B1%B1%E9%81%93%E5%A3%AB%E4%B8%8D%E9%81%87/</link><pubDate>Thu, 05 Jan 2006 21:45:00 +0000</pubDate><guid>https://zgia.net/2006/01/%E8%AE%BF%E6%88%B4%E5%A4%A9%E5%B1%B1%E9%81%93%E5%A3%AB%E4%B8%8D%E9%81%87/</guid><description>&lt;p&gt;访戴天山道士不遇
+李白
+犬吠水声中，桃花带露浓。树深时见鹿，溪午不闻钟。
+野竹分青霭，飞泉挂碧峰。无人之所去，愁倚两三松。&lt;img loading="lazy" src="http://c.services.spaces.live.com/CollectionWebService/c.gif?cid=-903528312043436281&amp;page=RSS%ef%bc%9a%e8%ae%bf%e6%88%b4%e5%a4%a9%e5%b1%b1%e9%81%93%e5%a3%ab%e4%b8%8d%e9%81%87&amp;referrer="&gt;&lt;img loading="lazy" src="http://c.live.com/c.gif?NC=31263&amp;NA=1149&amp;PI=81873&amp;RF=&amp;DI=3919&amp;PS=85545&amp;TP=zgia.spaces.live.com&amp;GT1=zgia"&gt;&lt;/p&gt;</description></item><item><title>继续读诗－－《偶书》</title><link>https://zgia.net/2005/12/%E7%BB%A7%E7%BB%AD%E8%AF%BB%E8%AF%97%E5%81%B6%E4%B9%A6/</link><pubDate>Sat, 31 Dec 2005 09:30:00 +0000</pubDate><guid>https://zgia.net/2005/12/%E7%BB%A7%E7%BB%AD%E8%AF%BB%E8%AF%97%E5%81%B6%E4%B9%A6/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;偶 书
+刘 叉
+日出扶桑一丈高，人间万事细如毛。
+野夫怒见不平事，磨损胸中万古刀。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;仅以此诗悼念我的日益消退的正义感。
+&lt;img loading="lazy" src="http://c.services.spaces.live.com/CollectionWebService/c.gif?cid=-903528312043436281&amp;page=RSS%ef%bc%9a%e7%bb%a7%e7%bb%ad%e8%af%bb%e8%af%97%ef%bc%8d%ef%bc%8d%e3%80%8a%e5%81%b6%e4%b9%a6%e3%80%8b&amp;referrer="&gt;&lt;img loading="lazy" src="http://c.live.com/c.gif?NC=31263&amp;NA=1149&amp;PI=81873&amp;RF=&amp;DI=3919&amp;PS=85545&amp;TP=zgia.spaces.live.com&amp;GT1=zgia"&gt;&lt;/p&gt;</description></item><item><title>会当凌绝顶，一览众山小</title><link>https://zgia.net/2005/12/%E4%BC%9A%E5%BD%93%E5%87%8C%E7%BB%9D%E9%A1%B6%E4%B8%80%E8%A7%88%E4%BC%97%E5%B1%B1%E5%B0%8F/</link><pubDate>Thu, 22 Dec 2005 09:27:00 +0000</pubDate><guid>https://zgia.net/2005/12/%E4%BC%9A%E5%BD%93%E5%87%8C%E7%BB%9D%E9%A1%B6%E4%B8%80%E8%A7%88%E4%BC%97%E5%B1%B1%E5%B0%8F/</guid><description>&lt;blockquote&gt;
+&lt;p&gt;望 岳杜甫
+岱宗夫如何？齐鲁青未了。造化钟神秀，阴阳隔昏晓。
+荡胸生层云，决眦入归鸟。会当凌绝顶，一览众山小。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;登上顶峰，只有在这里眺望，才能感到众生的渺小。
+&lt;img loading="lazy" src="http://c.services.spaces.live.com/CollectionWebService/c.gif?cid=-903528312043436281&amp;page=RSS%ef%bc%9a%e4%bc%9a%e5%bd%93%e5%87%8c%e7%bb%9d%e9%a1%b6%ef%bc%8c%e4%b8%80%e8%a7%88%e4%bc%97%e5%b1%b1%e5%b0%8f&amp;referrer="&gt;&lt;img loading="lazy" src="http://c.live.com/c.gif?NC=31263&amp;NA=1149&amp;PI=81873&amp;RF=&amp;DI=3919&amp;PS=85545&amp;TP=zgia.spaces.live.com&amp;GT1=zgia"&gt;&lt;/p&gt;</description></item><item><title>今天继续读诗－－－－《越女词》</title><link>https://zgia.net/2005/12/%E4%BB%8A%E5%A4%A9%E7%BB%A7%E7%BB%AD%E8%AF%BB%E8%AF%97%E8%B6%8A%E5%A5%B3%E8%AF%8D/</link><pubDate>Wed, 21 Dec 2005 09:38:00 +0000</pubDate><guid>https://zgia.net/2005/12/%E4%BB%8A%E5%A4%A9%E7%BB%A7%E7%BB%AD%E8%AF%BB%E8%AF%97%E8%B6%8A%E5%A5%B3%E8%AF%8D/</guid><description>&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;blockquote&gt;
+&lt;p&gt;越女词
+李白
+耶溪采莲女，风客棹歌回。
+笑入荷花去，伴羞不出来。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;棹，&lt;a href="http://cb.kingsoft.com/search?s=%E8%FE&amp;amp;lang=gb2312&amp;amp;Submit=%CB%D1+%CB%F7&amp;amp;t=word"&gt;请点击这里查看具体意思&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;北方人可能想象不了这种感觉：碧水，荷花，荷叶，扁舟，采莲女，路上行人&lt;/p&gt;
+&lt;p&gt;其实我也没有看到过这样的情形，我们村虽然有荷溏，但是没有“伴羞”的采莲女。&lt;/p&gt;</description></item></channel></rss>

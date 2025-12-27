@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Web on 快乐每一天</title><link>https://zgia.net/categories/web/</link><description>Recent content in Web on 快乐每一天</description><generator>Hugo -- 0.153.3</generator><language>zh-CN</language><lastBuildDate>Thu, 28 Aug 2014 17:36:40 +0000</lastBuildDate><atom:link href="https://zgia.net/categories/web/index.xml" rel="self" type="application/rss+xml"/><item><title>GIT 配置相关文章</title><link>https://zgia.net/2013/02/git-%E9%85%8D%E7%BD%AE%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/</link><pubDate>Tue, 19 Feb 2013 10:11:39 +0000</pubDate><guid>https://zgia.net/2013/02/git-%E9%85%8D%E7%BD%AE%E7%9B%B8%E5%85%B3%E6%96%87%E7%AB%A0/</guid><description>&lt;p&gt;最近花时间了解了一下Git，并配置了一个。学习过程中，查阅了一些文章，分享出来。&lt;/p&gt;
+&lt;p&gt;工作环境：ubuntu&lt;/p&gt;
+&lt;p&gt;1、《&lt;a href="http://www.cnblogs.com/xl19862005/archive/2011/06/28/2092464.html" title="ubuntu上配置git服务器"&gt;ubuntu上配置git服务器&lt;/a&gt;》&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;文章出处：&lt;a href="http://www.cnblogs.com/xl19862005"&gt;http://www.cnblogs.com/xl19862005&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;作者：Xandy&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;当执行：git clone git@server:gitosis-admin.git，如果出现：fatal: ‘/home/git/repositories/gitosis-admin.git’ does not appear to be a git repository，请参看条目2。&lt;/p&gt;</description></item><item><title>自定义chrome的用户数据目录和使用Greasemonkey脚本</title><link>https://zgia.net/2009/10/%E8%87%AA%E5%AE%9A%E4%B9%89chrome%E7%9A%84%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E7%9B%AE%E5%BD%95%E5%92%8C%E4%BD%BF%E7%94%A8greasemonkey%E8%84%9A%E6%9C%AC/</link><pubDate>Thu, 08 Oct 2009 23:13:19 +0000</pubDate><guid>https://zgia.net/2009/10/%E8%87%AA%E5%AE%9A%E4%B9%89chrome%E7%9A%84%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E7%9B%AE%E5%BD%95%E5%92%8C%E4%BD%BF%E7%94%A8greasemonkey%E8%84%9A%E6%9C%AC/</guid><description>&lt;p&gt;1、自定义chrome的用户数据目录
+修改chrome的快捷方式，加上“ &lt;strong&gt;&amp;ndash;user-data-dir=C:\chrome-user-data-dir&lt;/strong&gt;”，注意，“&amp;ndash;”（2个连字符-）前面有个空格。
+2、使用Greasemonkey脚本
+修改chrome的快捷方式，加上“ &lt;strong&gt;&amp;ndash;enable-user-scripts&lt;/strong&gt;”，注意，“&amp;ndash;”（2个连字符-）前面有个空格。
+启动chrome后，会在用户数据目录下生成一个&lt;strong&gt;User Scripts&lt;/strong&gt;目录，将Greasemonkey脚本复制到这个目录，重启chrome即可。
+我使用“ &lt;strong&gt;&amp;ndash;enable-user-scripts &amp;ndash;user-data-dir=C:\chrome-user-data-dir&lt;/strong&gt;”，这样，双系统环境下，就能使用同一份用户数据了。&lt;/p&gt;</description></item><item><title>向svn添加文件时产生403错误</title><link>https://zgia.net/2009/06/%E5%90%91svn%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6%E6%97%B6%E4%BA%A7%E7%94%9F403%E9%94%99%E8%AF%AF/</link><pubDate>Tue, 16 Jun 2009 16:31:02 +0000</pubDate><guid>https://zgia.net/2009/06/%E5%90%91svn%E6%B7%BB%E5%8A%A0%E6%96%87%E4%BB%B6%E6%97%B6%E4%BA%A7%E7%94%9F403%E9%94%99%E8%AF%AF/</guid><description>&lt;p&gt;./bin/svnadmin create ./svnroot/edu
+chown -R daemon ./svnroot/edu
+chmod -R 755 ./svnroot/edu
+然后import文件时，返回错误：&lt;strong&gt;服务器发送了意外的返回值(403 Forbidden)，在响应 “CHECKOUT” 的请求 “/svn/edu/!svn/ver/1/trunck” 中&lt;/strong&gt;。
+后来改成edusystem就ok了。真是ft。&lt;/p&gt;</description></item><item><title>Windows Live Writer 向 DEDECMS 发文章</title><link>https://zgia.net/2009/04/windows-live-writer-%E5%90%91-dedecms-%E5%8F%91%E6%96%87%E7%AB%A0/</link><pubDate>Thu, 30 Apr 2009 16:37:00 +0000</pubDate><guid>https://zgia.net/2009/04/windows-live-writer-%E5%90%91-dedecms-%E5%8F%91%E6%96%87%E7%AB%A0/</guid><description>&lt;p&gt;这个需求很另类啊，不过已经基本实现了（基于wordpress自带的xmlrpc.php而成）。可用的功能有：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;使用dedecms自己的模板、CSS；&lt;/li&gt;
+&lt;li&gt;发表带图片的文章；&lt;/li&gt;
+&lt;li&gt;列出最近发表的文章；&lt;/li&gt;
+&lt;li&gt;指定分类（取消了live writer新建分类的功能）；&lt;/li&gt;
+&lt;li&gt;标签；&lt;/li&gt;
+&lt;li&gt;文章来源；&lt;/li&gt;
+&lt;li&gt;文章作者；&lt;/li&gt;
+&lt;li&gt;文章简介；&lt;/li&gt;
+&lt;li&gt;设置发表时间&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;待实现功能：编辑已经发表的文章。
+//****
+相关文章：
+&lt;a href="http://msdn.microsoft.com/en-us/library/bb463266.aspx" title="Windows Live Writer Provider Customization API"&gt;Windows Live Writer Provider Customization API&lt;/a&gt;
+&lt;a href="http://www.s-anand.net/blog/wordpress-themes-on-windows-live-writer/" title="WordPress themes on Live Writer"&gt;WordPress themes on Live Writer&lt;/a&gt;
+&lt;a href="http://codex.wordpress.org/Weblog_Client" title="Weblog Client"&gt;Weblog Client&lt;/a&gt;&lt;/p&gt;</description></item><item><title>新的开发任务：HXSD Gallery More</title><link>https://zgia.net/2008/07/%E6%96%B0%E7%9A%84%E5%BC%80%E5%8F%91%E4%BB%BB%E5%8A%A1hxsd-gallery-more/</link><pubDate>Wed, 23 Jul 2008 15:39:06 +0000</pubDate><guid>https://zgia.net/2008/07/%E6%96%B0%E7%9A%84%E5%BC%80%E5%8F%91%E4%BB%BB%E5%8A%A1hxsd-gallery-more/</guid><description>&lt;p&gt;&lt;a href="http://yuntian.name/wp-content/uploads/2008/07/g.png"&gt;&lt;img loading="lazy" src="http://yuntian.name/wp-content/uploads/2008/07/g-288x300.png" title="g"&gt;&lt;/a&gt;其实很简单，分类－图集－图片。
+分类有图集A，B，C&amp;hellip;&amp;hellip;每个图集有若干图片；
+浏览图集时，只显示一张图片，点击图片浏览图集中的另一张图片；通过链接切换到前一个、后一个图集；
+在分类中上传图片（GIF，PNG，JPG），则生成图集；可以上传ZIP文件；
+在浏览图集时，上传图片，则将图片上传到当前图集中；
+可以使用幻灯片方式浏览分类、图集中的图片，提供了多种特效（浏览器支持才行）；
+评论、评分、下载图片、显示图片的EXIF信息等等都是基本功能啦。&lt;/p&gt;</description></item><item><title>企业资产管理已经β 1</title><link>https://zgia.net/2008/07/%E4%BC%81%E4%B8%9A%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E5%B7%B2%E7%BB%8F%CE%B2-1/</link><pubDate>Mon, 07 Jul 2008 10:41:52 +0000</pubDate><guid>https://zgia.net/2008/07/%E4%BC%81%E4%B8%9A%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E5%B7%B2%E7%BB%8F%CE%B2-1/</guid><description>&lt;p&gt;上周二编码结束，周五结束α测试，本周开始β测试了。&lt;/p&gt;</description></item><item><title>资产管理的物品申请流程</title><link>https://zgia.net/2008/06/%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E7%9A%84%E7%89%A9%E5%93%81%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B/</link><pubDate>Thu, 26 Jun 2008 10:13:27 +0000</pubDate><guid>https://zgia.net/2008/06/%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86%E7%9A%84%E7%89%A9%E5%93%81%E7%94%B3%E8%AF%B7%E6%B5%81%E7%A8%8B/</guid><description>&lt;h1&gt;&lt;a href="http://yuntian.name/wp-content/uploads/2008/06/eam.png"&gt;&lt;img loading="lazy" src="http://yuntian.name/wp-content/uploads/2008/06/eam-300x148.png" title="eam"&gt;&lt;/a&gt;&lt;/h1&gt;
+&lt;h1 id="员工申请物品流程"&gt; 员工申请物品流程&lt;/h1&gt;
+&lt;hr&gt;
+&lt;h2 id="1-申请"&gt;1 申请&lt;/h2&gt;
+&lt;h2 id="133-requestflow表存放申请流程处理"&gt;1.1 选择物品
+1.2 选择审批人
+1.3 提交申请
+1.3.1 request表存放每个申请
+1.3.2 requestitem表存放申请的物品
+1.3.3 requestflow表存放申请流程处理&lt;/h2&gt;
+&lt;h2 id="2-部门内部处理申请"&gt;2 部门内部处理申请&lt;/h2&gt;
+&lt;h2 id="232-库房"&gt;2.1 审批人接到通知：短信
+2.2 审批人审批，并给出意见（会签）
+2.3 转交下一步
+2.3.1 更高级审批人
+2.3.2 库房&lt;/h2&gt;
+&lt;h2 id="3-库房处理"&gt;3 库房处理&lt;/h2&gt;
+&lt;p&gt;有3个库房：IT库、非IT库、宣传品库。
+3.1 物资负责人
+3.1.1 没有物品：转采购流程
+3.1.2 有相关物品：审批后，转物品库房管理员
+3.2 库房管理员
+3.2.1 出库，结束流程。&lt;/p&gt;</description></item><item><title>目前正在进行的项目：资产管理</title><link>https://zgia.net/2008/06/%E7%9B%AE%E5%89%8D%E6%AD%A3%E5%9C%A8%E8%BF%9B%E8%A1%8C%E7%9A%84%E9%A1%B9%E7%9B%AE%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86/</link><pubDate>Wed, 04 Jun 2008 18:03:35 +0000</pubDate><guid>https://zgia.net/2008/06/%E7%9B%AE%E5%89%8D%E6%AD%A3%E5%9C%A8%E8%BF%9B%E8%A1%8C%E7%9A%84%E9%A1%B9%E7%9B%AE%E8%B5%84%E4%BA%A7%E7%AE%A1%E7%90%86/</guid><description>&lt;p&gt;这2个月一直在做一个产品，php+mysql。有个很好听的名字：企业资产管理，Enterprise Assets Management（EAM）。
+目前已经完成：
+1、固定资产、非固定资产，这2种分类方式仅面向实物，而非财务；
+2、计算机整机和零部件处理；
+3、资产在员工之间的转移；
+4、统计，使用了open flash chart提供的flash图表；
+5、权限
+下一步：
+1、资产申请的工作流；
+2、更完善的统计、报表功能。&lt;/p&gt;</description></item><item><title>相册开发</title><link>https://zgia.net/2008/02/%E7%9B%B8%E5%86%8C%E5%BC%80%E5%8F%91/</link><pubDate>Sat, 02 Feb 2008 17:00:35 +0000</pubDate><guid>https://zgia.net/2008/02/%E7%9B%B8%E5%86%8C%E5%BC%80%E5%8F%91/</guid><description>&lt;p&gt;2008-2-2
+1、缓存大图文件，避免第二次使用GD创建缩略图
+2、更改页面模板&lt;/p&gt;</description></item><item><title>星仔知道 开发记录</title><link>https://zgia.net/2008/01/%E6%98%9F%E4%BB%94%E7%9F%A5%E9%81%93-%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/</link><pubDate>Fri, 11 Jan 2008 10:34:32 +0000</pubDate><guid>https://zgia.net/2008/01/%E6%98%9F%E4%BB%94%E7%9F%A5%E9%81%93-%E5%BC%80%E5%8F%91%E8%AE%B0%E5%BD%95/</guid><description>&lt;p&gt;星仔知道于2007.12.4进行程序规划设计，计划今年4月正式上线。目前正处于程序编码中。
+系统采用开源的PHP5，MySQL 5，使用模版作为视图，基本实现MVC框架结构。
+已经完成的功能有：
+1、首页：分类，未解决问题（前n个），已解决问题（前n个），投票问题（前n个）；广告位等。
+2、分类页：所有二级分类，仿百度知道的：全部问题、已解决、待解决、高分、投票中、零回答（就是通过标记分别列出），问题列表（通过图示表示问题是否解决等），页面分页；广告位等。
+3、问题页：问题状态（是否解决等），问题内容，答复，分页等；
+3.1、未解决的问题：提问者可以编辑问题，提高悬赏，设置为无满意答案，提交投票，设置最佳答案等；回答者可以编辑自己的回答，只能回答一次；
+3.2、已经解决问题 ：只能浏览，不能进行任何操作；
+3.3、投票中问题：提问者也可以投票，但是不能进行3.1的操作；用户只能投一次，投票后，显示每个回答的投票细节；
+4、其他细节参见jira的开发进程，不在此列出。&lt;/p&gt;</description></item><item><title>Amazon Simple Storage Service(Amazon S3) 之源码下载</title><link>https://zgia.net/2007/12/amazon-simple-storage-serviceamazon-s3-%E4%B9%8B%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/</link><pubDate>Mon, 31 Dec 2007 23:54:20 +0000</pubDate><guid>https://zgia.net/2007/12/amazon-simple-storage-serviceamazon-s3-%E4%B9%8B%E6%BA%90%E7%A0%81%E4%B8%8B%E8%BD%BD/</guid><description>&lt;p&gt;Amazon S3 Viewer
+zGia!
+wuliuqiba AT gmail.com
+&lt;a href="http://zgia.net/"&gt;http://zgia.net/&lt;/a&gt;
+&lt;strong&gt;简介&lt;/strong&gt;
+采用Amazon S3上提供的perl类库：Amazon S3 Library for REST in Perl，这个
+类库完成了PUT，GET，HEAD，DELETE等几乎所有的操作。
+地址：&lt;a href="http://developer.amazonwebservices.com/connect/entry.jspa?externalID=133&amp;amp;categoryID=47"&gt;http://developer.amazonwebservices.com/connect/entry.jspa?externalID=133&amp;amp;categoryID=47&lt;/a&gt;
+我所做的仅是用perl写了个web程序，有一个简单的UI，基本无创新，仅供参考。
+&lt;strong&gt;使用说明&lt;/strong&gt;
+1、linux下，将文件logger.log，文件夹acl设置为777；
+2、编辑文件ZWFrameConfig.pm；
+3、可能需要安装某些类，请查阅：S3_README；
+4、使用md5.pl获得新的$cfg{&amp;lsquo;password&amp;rsquo;}，
+5、必需要修改的：$cfg{&amp;lsquo;awsAccessKeyID&amp;rsquo;}、$cfg{&amp;lsquo;awsSecretAccessKey&amp;rsquo;} 和$cfg{&amp;lsquo;password&amp;rsquo;}；
+6、可能要修改的：$cfg{&amp;lsquo;webName&amp;rsquo;} 和 $cfg{&amp;lsquo;uniqueCookie&amp;rsquo;}，其他的随便。&lt;/p&gt;</description></item><item><title>Amazon Simple Storage Service(Amazon S3) 之三，实战</title><link>https://zgia.net/2007/12/amazon-simple-storage-serviceamazon-s3-%E4%B9%8B%E4%B8%89%E5%AE%9E%E6%88%98/</link><pubDate>Tue, 25 Dec 2007 16:23:29 +0000</pubDate><guid>https://zgia.net/2007/12/amazon-simple-storage-serviceamazon-s3-%E4%B9%8B%E4%B8%89%E5%AE%9E%E6%88%98/</guid><description>&lt;p&gt;以下的操作基于REST，官方文档：http://docs.amazonwebservices.com/AmazonS3/2006-03-01/RESTAuthentication.html
+我们的程序向http://bucket.s3.amazonaws.com/(或者http://s3.amazonaws.com/bucket/)发送带指定header的HTTP::Request，S3接到请求后，进行处理，将处理结果返回HTTP::Response，程序处理HTTP::Response。
+下面以上传一个文件举例说明，程序使用perl实现。
+1、假设已经有一个bucket，名字为：buckettest；
+2、用HTTP::Request的&lt;strong&gt;PUT&lt;/strong&gt;方法上传文件；
+3、使用HTTP标准Authorization头发送验证信息；这个验证的格式为：&lt;/p&gt;</description></item><item><title>REST vs. SOAP: The Battle of the Web Service Titans</title><link>https://zgia.net/2007/12/rest-vs.-soap-the-battle-of-the-web-service-titans/</link><pubDate>Tue, 11 Dec 2007 10:35:50 +0000</pubDate><guid>https://zgia.net/2007/12/rest-vs.-soap-the-battle-of-the-web-service-titans/</guid><description>&lt;p&gt;Picking a winning Web service approach::&lt;a href="http://webservices.sys-con.com/read/79282.htm"&gt;http://webservices.sys-con.com/read/79282.htm&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;By: &lt;a href="http://webservices.sys-con.com/author/5664hinchcliffe.htm"&gt;Dion Hinchcliffe&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Apr. 26, 2005 11:00 AM&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;At their most basic level, Web services work well and solve important problems because they are based on standards. However choosing among the available Web service approaches can still be surprisingly difficult. Whether it is correct or incorrect, the choice will have far reaching consequences for any project. A foray in the wrong direction often means having to abandon the initial investment, in terms of development, training, and infrastructure, to retool everything to go another way. Make a good decision though, and Web services become an enabling springboard to enterprise integration, information self-service, and all the attendant benefits of service-oriented architecture. In a highly competitive business environment, the risk of lost time and investment means that making the best decision up front is vital to success.&lt;/em&gt;&lt;/p&gt;</description></item><item><title>相册开发</title><link>https://zgia.net/2007/12/%E7%9B%B8%E5%86%8C%E5%BC%80%E5%8F%91/</link><pubDate>Mon, 03 Dec 2007 14:31:30 +0000</pubDate><guid>https://zgia.net/2007/12/%E7%9B%B8%E5%86%8C%E5%BC%80%E5%8F%91/</guid><description>&lt;hr&gt;
+&lt;h2 id="version-2101"&gt;Version 2.1.01&lt;/h2&gt;
+&lt;p&gt;2007-12-3
+1、+ 大图片载入时，显示一个载入动画提示。
+2、o 修正扩展幻灯片演示的bug
+3、o 优化显示&lt;/p&gt;</description></item><item><title>相册开发</title><link>https://zgia.net/2007/11/%E7%9B%B8%E5%86%8C%E5%BC%80%E5%8F%91/</link><pubDate>Thu, 29 Nov 2007 17:00:57 +0000</pubDate><guid>https://zgia.net/2007/11/%E7%9B%B8%E5%86%8C%E5%BC%80%E5%8F%91/</guid><description>&lt;hr&gt;
+&lt;h2 id="version-2100"&gt;Version 2.1.00&lt;/h2&gt;
+&lt;p&gt;2007-11-29
+1、- 取消数据库中不需要的字段
+2、o 删除图片、删除评论、发布评论使用AJAX实现。
+3、o Prototype升级为1.6版本。&lt;/p&gt;</description></item><item><title>相册开发</title><link>https://zgia.net/2007/10/%E7%9B%B8%E5%86%8C%E5%BC%80%E5%8F%91/</link><pubDate>Wed, 10 Oct 2007 15:53:11 +0000</pubDate><guid>https://zgia.net/2007/10/%E7%9B%B8%E5%86%8C%E5%BC%80%E5%8F%91/</guid><description>&lt;hr&gt;
+&lt;h2 id="version-2084"&gt;Version 2.0.84&lt;/h2&gt;
+&lt;p&gt;2007-10-10
+1、+ 点击图片时，在当前页面打开图片，图片可以拖动；
+2、o 调整某些文件夹的位置；
+3、o 使用table代替div，解决firefox下查看图片时，图片不居中的问题；
+4、o 优化log中，数组的输出
+点击此页查看效果：
+&lt;a href="http://www.livebaby.net/album/details.php?image_id=177"&gt;http://www.livebaby.net/album/details.php?image_id=177&lt;/a&gt;&lt;/p&gt;</description></item><item><title>相册开发</title><link>https://zgia.net/2007/09/%E7%9B%B8%E5%86%8C%E5%BC%80%E5%8F%91/</link><pubDate>Wed, 26 Sep 2007 10:05:25 +0000</pubDate><guid>https://zgia.net/2007/09/%E7%9B%B8%E5%86%8C%E5%BC%80%E5%8F%91/</guid><description>&lt;p&gt;今天做了大量更改，记录如下。
+1、- 取消不需要的功能；
+2、o 优化上传处理；
+3、o 拆分function.php某些功能到core_function.php；
+4、+ 增加将某个图片设置为顶级相册的封面；
+5、+ 增加页面输出显示处理；
+6、o 将config.php从根目录移动到includes下面；
+7、+ 可以选择多个相册的相片幻灯片演示。
+8、+ 支持中文文件名，并默认使用中文文件名作为相片描述&lt;/p&gt;</description></item><item><title>为IE浏览器用户增加一些幻灯切换特效</title><link>https://zgia.net/2007/09/%E4%B8%BAie%E6%B5%8F%E8%A7%88%E5%99%A8%E7%94%A8%E6%88%B7%E5%A2%9E%E5%8A%A0%E4%B8%80%E4%BA%9B%E5%B9%BB%E7%81%AF%E5%88%87%E6%8D%A2%E7%89%B9%E6%95%88/</link><pubDate>Thu, 20 Sep 2007 10:47:35 +0000</pubDate><guid>https://zgia.net/2007/09/%E4%B8%BAie%E6%B5%8F%E8%A7%88%E5%99%A8%E7%94%A8%E6%88%B7%E5%A2%9E%E5%8A%A0%E4%B8%80%E4%BA%9B%E5%B9%BB%E7%81%AF%E5%88%87%E6%8D%A2%E7%89%B9%E6%95%88/</guid><description>&lt;p&gt;相册URL：&lt;a href="http://www.livebaby.net/album/index.php"&gt;http://www.livebaby.net/album/index.php&lt;/a&gt;
+幻灯片播放时，为IE浏览器（&amp;gt;= IE6）用户增加一些幻灯切换特效。
+演示：&lt;a href="http://www.livebaby.net/album/slideshow.php?catid=20"&gt;http://www.livebaby.net/album/slideshow.php?catid=20&lt;/a&gt;&lt;/p&gt;</description></item></channel></rss>

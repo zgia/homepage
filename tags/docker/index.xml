@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Docker on 快乐每一天</title><link>https://zgia.net/tags/docker/</link><description>Recent content in Docker on 快乐每一天</description><generator>Hugo -- 0.153.3</generator><language>zh-CN</language><lastBuildDate>Wed, 13 Nov 2019 11:56:07 +0000</lastBuildDate><atom:link href="https://zgia.net/tags/docker/index.xml" rel="self" type="application/rss+xml"/><item><title>php 7.1.12 Dockerfile</title><link>https://zgia.net/2017/12/php-7.1.12-dockerfile/</link><pubDate>Thu, 14 Dec 2017 21:40:14 +0000</pubDate><guid>https://zgia.net/2017/12/php-7.1.12-dockerfile/</guid><description>&lt;p&gt;`FROM php:7.1-fpm&lt;/p&gt;
+&lt;h1 id="composer"&gt;Composer&lt;/h1&gt;
+&lt;p&gt;COPY config/composer /usr/local/bin/composer
+RUN chmod 755 /usr/local/bin/composer&lt;/p&gt;
+&lt;h1 id="install-selected-extensions-and-other-stuff"&gt;Install selected extensions and other stuff&lt;/h1&gt;
+&lt;p&gt;RUN apt-get update &lt;br&gt;
+&amp;amp;&amp;amp; apt-get -y &amp;ndash;no-install-recommends install &lt;br&gt;
+build-essential lsb-release &lt;br&gt;
+libfreetype6-dev libjpeg62-turbo-dev libmcrypt-dev libpng-dev libssl-dev librabbitmq-dev &lt;br&gt;
+&amp;amp;&amp;amp; apt-get -y &amp;ndash;no-install-recommends install apt-utils &lt;br&gt;
+&amp;amp;&amp;amp; apt-get -y install wget procps iputils-ping net-tools vim telnet &lt;br&gt;
+&amp;amp;&amp;amp; apt-get autoremove -y; apt-get autoclean -y; apt-get clean -y; rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* /usr/share/doc/*
+RUN rm -rf /usr/local/etc/php-fpm.d/*
+RUN pecl install igbinary redis xdebug swoole amqp &lt;br&gt;
+&amp;amp;&amp;amp; echo &amp;ldquo;extension=igbinary.so&amp;rdquo; &amp;gt; /usr/local/etc/php/conf.d/igbinary.ini &lt;br&gt;
+&amp;amp;&amp;amp; echo &amp;ldquo;extension=redis.so&amp;rdquo; &amp;gt; /usr/local/etc/php/conf.d/redis.ini &lt;br&gt;
+&amp;amp;&amp;amp; echo &amp;ldquo;zend_extension=xdebug.so&amp;rdquo; &amp;gt; /usr/local/etc/php/conf.d/xdebug.ini &lt;br&gt;
+&amp;amp;&amp;amp; echo &amp;ldquo;extension=swoole.so&amp;rdquo; &amp;gt; /usr/local/etc/php/conf.d/swoole.ini &lt;br&gt;
+&amp;amp;&amp;amp; echo &amp;ldquo;extension=amqp.so&amp;rdquo; &amp;gt; /usr/local/etc/php/conf.d/amqp.ini
+RUN docker-php-source extract &amp;amp;&amp;amp; cp /usr/src/php/ext/openssl/config0.m4 /usr/src/php/ext/openssl/config.m4 &amp;amp;&amp;amp; docker-php-ext-install -j$(nproc) openssl &amp;amp;&amp;amp; rm -rf /usr/src/php
+RUN docker-php-ext-install -j$(nproc) iconv mcrypt pdo_mysql mysqli exif gettext
+RUN docker-php-ext-configure gd &amp;ndash;with-freetype-dir=/usr/include/ &amp;ndash;with-jpeg-dir=/usr/include/ &lt;br&gt;
+&amp;amp;&amp;amp; docker-php-ext-install -j$(nproc) gd&lt;/p&gt;</description></item></channel></rss>
